@@ -1,0 +1,219 @@
+@use '../abstracts' as *;
+
+.hero {
+	padding: 20px 0;
+	width: 100%;
+	@include flex(row, center, center, 20px);
+	@media (max-width: 991px) {
+		flex-direction: column;
+		gap: 24px;
+		padding: 0;
+		width: calc(100% + 24px);
+		margin-left: -12px;
+	}
+	&__left {
+		width: 50%;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+	}
+
+	&__card {
+		position: relative;
+		@include box(100%, 520px, 16px);
+		overflow: hidden;
+		@media (max-width: 991px) {
+			height: 640px;
+		}
+	}
+
+	&__card-small {
+		@media (max-width: 991px) {
+			height: 240px;
+		}
+	}
+
+	&__card-link {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		z-index: 2;
+		@include center;
+		@include box(32px);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+			transform: scale(1.1);
+		}
+		@media (max-width: 991px) {
+			top: 4px;
+			right: 4px;
+		}
+	}
+
+	&__video {
+		position: absolute;
+		@include box(100%);
+		object-fit: cover;
+	}
+
+	&__video::-webkit-media-controls {
+		display: none !important;
+	}
+
+	&__video::-webkit-media-controls-enclosure {
+		display: none !important;
+	}
+
+	&__video::-webkit-media-controls-panel {
+		display: none !important;
+	}
+
+	&__img {
+		position: absolute;
+		@include box(100%);
+		object-fit: cover;
+	}
+
+	&__card-info {
+		position: absolute;
+		left: 8px;
+		bottom: 8px;
+		width: calc(100% - 16px);
+		@include flex(row, flex-start, flex-start, 12px);
+		padding: 16px;
+		border-radius: 12px;
+		background: rgba(67, 67, 74, 0.4);
+		backdrop-filter: blur(8px);
+		@media (max-width: 991px) {
+			gap: 8px;
+		}
+	}
+
+	&__card-content {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__card-content--small {
+		position: absolute;
+		left: 8px;
+		bottom: 8px;
+		width: calc(100% - 16px);
+		@include flex(column, flex-start, flex-start, 8px);
+		padding: 12px;
+		border-radius: 12px;
+		background: rgba(67, 67, 74, 0.4);
+		backdrop-filter: blur(8px);
+		@media (max-width: 991px) {
+			padding: 8px;
+		}
+	}
+
+	&__card-title {
+		color: $white;
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(24px, 500, 30px);
+		}
+	}
+
+	&__card-title--small {
+		width: 90%;
+		color: $white;
+		@include text-style(20px, 500, 26px);
+		@media (max-width: 991px) {
+			width: 100%;
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	&__card-btn--small {
+		background: $text;
+		border-color: $text;
+		&:hover {
+			color: $white;
+			background: $green;
+			border-color: $green;
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__card-play {
+		@include center;
+		@include box(32px);
+		border-radius: 200px;
+		background: $green;
+		flex-shrink: 0;
+	}
+
+	&__right {
+		position: relative;
+		width: 50%;
+		@media (max-width: 991px) {
+			width: calc(100% - 12px);
+			margin-left: 12px;
+		}
+	}
+
+	&__right-prev {
+		position: absolute;
+		left: 4px;
+		top: 50%;
+		transform: translateY(-50%);
+		@include center;
+		@include box(36px, 36px, 200px);
+		background: rgba(255, 255, 255, 0.32);
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+		z-index: 2;
+		@include transition;
+		&:hover {
+			background: $green;
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__right-next {
+		position: absolute;
+		right: 4px;
+		top: 50%;
+		transform: translateY(-50%);
+		@include center;
+		@include box(36px, 36px, 200px);
+		background: rgba(255, 255, 255, 0.32);
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+		z-index: 2;
+		@include transition;
+		&:hover {
+			background: $green;
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__right-pagination {
+		display: none;
+		@media (max-width: 991px) {
+			margin-top: 16px;
+			@include flex(row, flex-start, center, 8px);
+			margin-bottom: 24px;
+			.swiper-pagination-bullet {
+				@include box(24px, 3px, 200px);
+				opacity: 0.2;
+				background: $green;
+				@include transition;
+				margin: 0 !important;
+			}
+			.swiper-pagination-bullet-active {
+				opacity: 1;
+			}
+		}
+	}
+}

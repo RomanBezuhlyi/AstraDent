@@ -1,0 +1,165 @@
+@use '../abstracts' as *;
+
+.modal {
+	@include center;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	opacity: 0;
+	pointer-events: none;
+	@include transition;
+
+	&__content {
+		position: relative;
+		@include flex(column, center, flex-start, 20px);
+		width: 480px;
+		padding: 44px;
+		border-radius: 8px;
+		background: $white;
+		transform: translateY(-10px);
+		@include transition;
+		@media (max-width: 991px) {
+			width: 390px;
+			padding: 20px;
+			gap: 12px;
+		}
+	}
+
+	&__close {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		@include center;
+	}
+
+	&__title {
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+
+	&__form {
+		position: relative;
+		width: 100%;
+		@include flex(column, center, center, 12px);
+		z-index: 2;
+	}
+
+	&__input {
+		@include flex(row, flex-start, center, 8px);
+		@include box(100%, 48px);
+		padding: 8px 16px;
+		color: $text;
+		@include text-style(16px, 400, 22px);
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		background: $white;
+		@include transition;
+		@media (max-width: 991px) {
+			@include box(100%, 40px);
+			@include text-style(14px, 400, 18px);
+		}
+		&::placeholder {
+			color: $text;
+			opacity: 1;
+		}
+		&:focus {
+			border-color: $green;
+		}
+	}
+
+	&__dropdown {
+		position: relative;
+		width: 100%;
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		background: $white;
+
+		.dropdown__header {
+			@include flex(row, space-between, center, 8px);
+			cursor: pointer;
+			height: 46px;
+			padding: 8px 16px;
+			@include text-style(16px, 400, 22px);
+			@media (max-width: 991px) {
+				height: 40px;
+				@include text-style(14px, 400, 18px);
+			}
+		}
+
+		.dropdown__chevron {
+			@include center;
+			@include transition;
+		}
+
+		.dropdown__list {
+			max-height: 0;
+			overflow: hidden;
+			@include transition;
+		}
+
+		.dropdown__list.open {
+			max-height: 200px;
+		}
+
+		.dropdown__option {
+			@include text-style(16px, 400, 22px);
+			padding: 8px 16px;
+			cursor: pointer;
+			@media (max-width: 991px) {
+				@include text-style(14px, 400, 18px);
+			}
+		}
+
+		.dropdown__option:hover {
+			background: $bg;
+		}
+	}
+
+	&__thank {
+		@include text-style(16px, 400, 22px);
+		@include transition;
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__btn {
+		@include flex(row, center, center, 10px);
+		@include box(100%, 46px);
+		padding: 12px 36px;
+		color: $white;
+		@include text-style(16px, 500, 22px, center);
+		border-radius: 200px;
+		border: 1px solid $green;
+		background: $green;
+		@include transition;
+		@media (max-width: 991px) {
+			height: 40px;
+			@include text-style(14px, 400, 18px);
+		}
+		&:hover {
+			color: $green;
+			background: $white;
+		}
+	}
+
+	&__bg-element {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+	}
+}
+.modal.active {
+	pointer-events: all;
+	opacity: 1;
+	.modal__content {
+		transform: translateY(0);
+	}
+}
+.hide {
+	display: none;
+}

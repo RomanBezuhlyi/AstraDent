@@ -1,0 +1,77 @@
+@use '../abstracts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	font-style: normal;
+	font-weight: 400;
+	font-family: 'Onest', sans-serif;
+	background: $bg;
+	color: $text;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	max-width: 1680px;
+	margin: auto;
+	padding: 0 20px;
+	@media (max-width: 991px) {
+		padding: 0 12px;
+	}
+}
+
+// section {
+// 	padding: 44px;
+// 	background: $grey;
+// }
+
+.outline {
+	@include flex(row, center, center, 10px);
+	height: 44px;
+	padding: 8px 36px;
+	color: $green;
+	@include text-style(14px, 500, 18px, center);
+	border-radius: 8px;
+	border: 1px solid $green;
+	@include transition;
+	&:hover {
+		color: $white;
+		background: $green;
+	}
+	@media (max-width: 1248px) {
+		padding: 8px 12px;
+	}
+}
+
+.primary {
+	@include flex(row, center, center, 10px);
+	height: 42px;
+	padding: 12px 36px;
+	color: $white;
+	@include text-style(14px, 500, 18px, center);
+	border: 1px solid $green;
+	border-radius: 200px;
+	background: $green;
+	@include transition;
+	&:hover {
+		color: $green;
+		background: $white;
+	}
+	@media (max-width: 1248px) {
+		padding: 8px 12px;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+	height: 100vh;
+}

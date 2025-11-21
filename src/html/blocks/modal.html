@@ -1,0 +1,48 @@
+<div class="modal">
+	<div class="modal__content">
+		<button class="modal__close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<img class="modal__img hide" src="./img/modal-img.svg" alt="" />
+		<h2 class="modal__title title">Записатися на прийом</h2>
+		<h2 class="modal__title title-thank hide">
+			Спасибо, <br />
+			ваша заявка принята
+		</h2>
+		<form class="modal__form">
+			<input class="modal__input" type="text" placeholder="Ваше имя" required />
+			<input
+				class="modal__input"
+				type="email"
+				placeholder="Электронна пошта"
+				required
+			/>
+			<input
+				class="modal__input"
+				data-phone-input
+				type="text"
+				placeholder="Телефон"
+				required
+			/>
+			<div class="modal__dropdown">
+				<div class="dropdown__header">
+					<span class="dropdown__selected">Выберите услугу</span>
+					<img class="dropdown__chevron" src="./img/chevron.svg" alt="" />
+				</div>
+				<ul class="dropdown__list">
+					<li class="dropdown__option">Консультація стоматолога</li>
+					<li class="dropdown__option">Видалення зуба</li>
+					<li class="dropdown__option">Імплантація</li>
+					<li class="dropdown__option">Відбілювання</li>
+				</ul>
+			</div>
+
+			<button class="modal__btn" type="submit">Записатися на прийом</button>
+		</form>
+		<p class="modal__thank hide">
+			В ближайшие два часа с вами свяжется наш менеджер, чтобы обсудить удобное
+			время приёма
+		</p>
+		<img class="modal__bg-element" src="./img/bg-elemeny-modal.svg" alt="" />
+	</div>
+</div>

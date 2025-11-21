@@ -1,0 +1,705 @@
+@use '../abstracts' as *;
+
+.banner {
+	position: relative;
+	@include center;
+	height: 34px;
+	border-bottom: 1px solid $bg;
+	background: $white;
+	overflow: hidden;
+	&__bg-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.container {
+		width: 100%;
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+	}
+
+	&__text {
+		@include flex(row, center, center, 12px);
+		@include text-style(14px, 400, 18px);
+	}
+
+	&__close {
+		@include center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 40px;
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__bg-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: rotate(180deg);
+	}
+}
+
+.header {
+	background: $white;
+	padding: 12px 0;
+	@media (max-width: 991px) {
+		display: none;
+	}
+
+	&__content {
+		@include flex(row, space-between, center, 10px);
+	}
+
+	&__left {
+		@include flex(row, flex-start, center);
+	}
+
+	&__logo {
+		margin-right: 40px;
+	}
+
+	&__dropdown.city {
+		margin-right: 12px;
+	}
+
+	&__dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	&__dropdown-button {
+		@include flex(row, center, center, 4px);
+		max-width: 249px;
+		@include box(100%, 44px);
+		padding: 12px 16px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 8px;
+		border: 1px solid #7f7f86;
+		backdrop-filter: blur(8px);
+		@media (max-width: 1248px) {
+			max-width: 180px;
+		}
+	}
+
+	&__dropdown-arrow {
+		@include center;
+		@include box(16px);
+		@include transition;
+	}
+
+	&__dropdown.open .header__dropdown-arrow {
+		transform: rotateX(180deg);
+	}
+
+	&__dropdown-content {
+		width: 100%;
+		position: absolute;
+		top: calc(100% + 5px);
+		left: 0;
+		@include text-style(14px, 400, 18px);
+		border-radius: 8px;
+		border: 1px solid #7f7f86;
+		background: $white;
+		z-index: 10;
+		overflow: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-10px);
+		@include transition;
+	}
+
+	&__dropdown-option {
+		width: 100%;
+		padding: 12px 16px;
+		cursor: pointer;
+	}
+
+	&__dropdown-option:hover {
+		background: $bg;
+	}
+
+	&__dropdown.open .header__dropdown-content {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+
+	&__logo > img {
+		@include box(185px, 50px);
+		object-fit: cover;
+	}
+
+	&__right {
+		@include flex(row, flex-end, center, 20px);
+	}
+
+	&__socials {
+		@include flex(row, center, center, 16px);
+		height: 44px;
+		padding: 12px 16px;
+		border-radius: 8px;
+		border: 1px solid #7f7f86;
+		backdrop-filter: blur(8px);
+	}
+
+	&__social {
+		@include center;
+	}
+
+	&__numbers {
+		@include flex(column, center, flex-start, 2px);
+		@media (max-width: 1248px) {
+			display: none;
+		}
+	}
+
+	&__number {
+		@include text-style(14px, 500, 18px, center);
+	}
+}
+
+.navbar {
+	padding: 12px 0;
+	background: $green;
+	@media (max-width: 991px) {
+		display: none;
+	}
+
+	.container {
+		position: relative;
+	}
+
+	&__content {
+		@include flex(row, space-between, center, 10px);
+	}
+
+	&__left {
+		@include flex(row, flex-start, center, 40px);
+	}
+
+	&__btn {
+		@include flex(row, center, center, 12px);
+		padding: 8px 24px;
+		color: $white;
+		@include text-style(16px, 500, 22px);
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: rgba(0, 0, 0, 0.04);
+		@include transition;
+		&:hover {
+			background: rgba(0, 0, 0, 0.24);
+		}
+		&.open-menu {
+			background: rgba(0, 0, 0, 0.24);
+		}
+	}
+
+	&__nav {
+		@include flex(row, flex-start, center, 40px);
+	}
+
+	&__link {
+		@include flex(row, center, center, 4px);
+		color: $white;
+		@include text-style(16px, 500, 22px);
+	}
+
+	&__link-mark {
+		@include center;
+		@include box(20px);
+		color: $white;
+		@include text-style(12px, 400, 14px);
+		border-radius: 20px;
+		background: rgba(0, 0, 0, 0.08);
+	}
+
+	&__right {
+		@include center;
+	}
+
+	&__search {
+		position: relative;
+	}
+
+	&__search-icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 16px;
+	}
+
+	&__search-input {
+		@include flex(row, flex-start, center);
+		@include box(200px, 40px);
+		padding: 8px 16px;
+		padding-left: 45px;
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		background: rgba(0, 0, 0, 0.08);
+		@include transition;
+		&:focus {
+			border-color: $white;
+			background: rgba(0, 0, 0, 0.04);
+		}
+		&::placeholder {
+			opacity: 1;
+			color: $white;
+		}
+	}
+}
+
+.catalog {
+	position: absolute;
+	@include flex(column, flex-start, flex-start, 20px);
+	width: 800px;
+	padding: 20px;
+	border-radius: 16px;
+	background: rgba(67, 67, 74, 0.4);
+	backdrop-filter: blur(12px);
+	@include transition;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-10px);
+	z-index: 111;
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+
+	&__title {
+		color: $white;
+		@include text-style(28px, 500, 34px);
+	}
+
+	&__row {
+		position: relative;
+		width: 100%;
+		@include flex(row, flex-start, flex-start, 20px);
+		z-index: 2;
+	}
+
+	&__col {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 4px);
+	}
+
+	&__col-link {
+		width: 100%;
+		@include flex(row, space-between, center, 12px);
+		height: 46px;
+		padding: 12px 20px;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		cursor: pointer;
+		@include transition;
+		&:hover {
+			color: $white;
+			background: $text;
+		}
+		&.active {
+			color: $white;
+			background: $text;
+		}
+	}
+
+	&__col-link-second {
+		width: 100%;
+	}
+
+	&__col-link-second > a {
+		width: 100%;
+		@include flex(row, space-between, center, 12px);
+		height: 46px;
+		padding: 12px 20px;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		cursor: pointer;
+		@include transition;
+		&:hover {
+			color: $white;
+			background: $text;
+		}
+	}
+
+	&__bg-element {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+	}
+}
+
+.header-mobile {
+	display: none;
+	@media (max-width: 991px) {
+		width: 100%;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 111;
+		opacity: 1;
+		@include transition;
+		overflow: auto;
+		padding-bottom: 20px;
+	}
+
+	&.open {
+		background: rgba(0, 0, 0, 0.8);
+		height: 100vh;
+		pointer-events: all;
+	}
+
+	&__content {
+		margin-top: 46px;
+		padding: 8px;
+		border-radius: 12px;
+		background: rgba(67, 67, 74, 0.4);
+		backdrop-filter: blur(8px);
+		@include transition;
+	}
+
+	&__content.open {
+		background: rgba(255, 255, 255, 0.2);
+	}
+
+	&__top {
+		@include flex(row, space-between, center);
+	}
+
+	&__left {
+		@include flex(row, flex-start, center, 4px);
+	}
+
+	&__right {
+		@include flex(row, flex-end, center, 4px);
+	}
+
+	&__logo {
+		@include center;
+		img {
+			width: 165px;
+		}
+	}
+
+	&__btn-search {
+		@include center;
+		@include box(40px, 40px, 6px);
+		padding: 8px 4px;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.24);
+		backdrop-filter: blur(4px);
+	}
+
+	&__langs {
+		@include flex(row, center, center, 6px);
+		margin-right: 20px;
+	}
+
+	&__lang {
+		color: #c5c5cc;
+		@include text-style(13px, 400, 16px);
+		@include transition;
+		&.active {
+			color: $white;
+		}
+		&:hover {
+			color: $white;
+		}
+	}
+
+	&__dot {
+		@include box(4px);
+		border-radius: 200px;
+		opacity: 0.2;
+		background: $green;
+	}
+
+	&__btn {
+		@include flex(row, center, center, 6px);
+		@include box(fit-content, 40px, 6px);
+		padding: 8px 16px;
+		color: $white;
+		@include text-style(13px, 400, 16px);
+		letter-spacing: 0.26px;
+		text-transform: uppercase;
+		background: rgba(130, 200, 60, 0.36);
+		backdrop-filter: blur(4px);
+	}
+
+	&__bottom {
+		max-height: 0;
+		overflow: hidden;
+		@include transition;
+	}
+
+	&__bottom.open {
+		max-height: 1000px;
+	}
+
+	&__search {
+		margin-top: 16px;
+		width: 100%;
+		position: relative;
+		input {
+			@include box(100%, 40px);
+			@include flex(row, flex-start, center, 8px);
+			padding: 6px 12px;
+			padding-left: 45px;
+			color: #c5c5cc;
+			@include text-style(13px, 400, 16px);
+			border-radius: 6px;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			background: rgba(67, 67, 74, 0.8);
+			backdrop-filter: blur(8px);
+			@include transition;
+			&:focus {
+				border-color: $white;
+			}
+			&::placeholder {
+				color: #c5c5cc;
+				opacity: 1;
+			}
+		}
+		img {
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 2;
+		}
+	}
+
+	&__list {
+		margin-top: 16px;
+		width: 100%;
+		@include flex(column, center, center, 4px);
+	}
+
+	&__item {
+		width: 100%;
+		@include flex(column, center, center);
+		padding: 12px 16px;
+		color: $white;
+		border-radius: 200px;
+		background: rgba(67, 67, 74, 0.8);
+		backdrop-filter: blur(8px);
+	}
+
+	&__item.active {
+		padding: 12px;
+		color: $text;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+	}
+
+	&__item.active {
+		.header-mobile__item-top > p {
+			@include text-style(16px, 500, 20px);
+		}
+		.header-mobile__item-top > img {
+			transform: rotate(90deg);
+		}
+		.header-mobile__item-bottom {
+			max-height: 1000px;
+			opacity: 1;
+		}
+		.header-mobile__sub-item {
+			background: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	&__item-top {
+		width: 100%;
+		@include flex(row, space-between, center, 12px);
+		p {
+			@include text-style(14px, 400, 18px);
+		}
+		img {
+			@include transition;
+		}
+	}
+
+	&__item-bottom {
+		width: 100%;
+		opacity: 0;
+		max-height: 0;
+		overflow: hidden;
+		@include transition;
+	}
+
+	&__sub-list {
+		margin-top: 8px;
+		width: 100%;
+		@include flex(column, center, center, 4px);
+	}
+
+	&__sub-item {
+		width: 100%;
+		padding: 12px;
+		border-radius: 6px;
+		@include transition;
+	}
+
+	&__sub-item--top {
+		width: 100%;
+		@include flex(row, space-between, center, 8px);
+		img {
+			@include transition;
+		}
+	}
+
+	&__sub-item--bottom {
+		@include flex(column, flex-start, flex-start);
+		overflow: hidden;
+		max-height: 0;
+		@include transition;
+		a {
+			margin-top: 8px;
+			color: #7f7f86;
+			@include text-style(14px, 400, 18px);
+			text-decoration-line: underline;
+			text-decoration-style: solid;
+			text-decoration-skip-ink: auto;
+			text-decoration-color: rgba(127, 127, 134, 0.4);
+			text-decoration-thickness: auto;
+			text-underline-offset: auto;
+			text-underline-position: from-font;
+		}
+	}
+
+	&__sub-item.active {
+		.header-mobile__sub-item--bottom {
+			max-height: 400px;
+		}
+		.header-mobile__sub-item--top > img {
+			transform: rotate(-90deg);
+		}
+	}
+
+	&__btns {
+		width: 100%;
+		margin-top: 16px;
+		@include flex(row, center, center, 8px);
+	}
+
+	&__btns--outline {
+		@include box(100%, 34px);
+		@include flex(row, center, center, 10px);
+		padding: 8px 16px;
+		color: $text;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $white;
+		@include transition;
+	}
+
+	&__btns--primary {
+		@include box(100%, 34px);
+		@include flex(row, center, center, 10px);
+		padding: 8px 16px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+	}
+
+	&__phones {
+		margin-top: 16px;
+		width: 100%;
+		@include flex(column, center, center, 4px);
+		margin-bottom: 16px;
+	}
+
+	&__phone {
+		width: 100%;
+		@include flex(row, space-between, center, 12px);
+		padding: 8px 20px;
+		border-radius: 200px;
+		background: rgba(67, 67, 74, 0.8);
+		backdrop-filter: blur(8px);
+		.phone {
+			@include flex(row, flex-start, center, 12px);
+			color: $white;
+			@include text-style(14px, 500, 18px);
+		}
+		.city {
+			color: $white;
+			@include text-style(14px, 400, 18px);
+			opacity: 0.6;
+		}
+	}
+
+	&__social {
+		width: 100%;
+		@include flex(column, center, center, 8px);
+		margin-bottom: 12px;
+	}
+
+	&__social--title {
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+	}
+
+	&__social--list {
+		width: 100%;
+		@include flex(row, center, center, 28px);
+		padding: 8px 16px;
+		border-radius: 200px;
+		background: rgba(67, 67, 74, 0.8);
+		backdrop-filter: blur(8px);
+	}
+
+	&__social--item,
+	&__social--link {
+		@include center;
+	}
+}
+
+.mobile-nav {
+	display: none;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 90;
+	width: 100%;
+	padding: 0 -4px;
+	@media (max-width: 991px) {
+		display: block;
+	}
+	&__menu {
+		width: 100%;
+		@include flex(row, space-around, center, 4px);
+		padding: 4px;
+		border-radius: 12px;
+		background: rgba(67, 67, 74, 0.4);
+		backdrop-filter: blur(8px);
+	}
+
+	&__link {
+		@include box(88.5px, 51px);
+		@include flex(column, flex-start, center, 2px);
+		padding: 6px 4px;
+		border-radius: 8px;
+		background: rgba(67, 67, 74, 0.24);
+		backdrop-filter: blur(4px);
+		color: $white;
+		@include text-style(11px, 400, 13px, center);
+	}
+
+	&__btn {
+		@include center;
+	}
+}

@@ -1,0 +1,83 @@
+@use '../abstracts' as *;
+
+.advantages {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include flex(row, flex-start, center, 8px);
+		flex-wrap: wrap;
+		@include text-style(28px, 500, 34px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			gap: 4px;
+			margin-bottom: 16px;
+		}
+		span {
+			@include center;
+			padding: 4px 6px;
+			color: $white;
+			border-radius: 8px;
+			background: $green;
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: 991px) {
+			gap: 4px;
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 4px;
+		}
+	}
+
+	&__item {
+		@include flex(row, flex-start, center, 16px);
+		padding: 20px;
+		flex: 1 0 0;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		@include transition;
+		@media (max-width: 991px) {
+			padding: 16px;
+			gap: 12px;
+		}
+		&:hover {
+			transform: scale(1.02);
+		}
+	}
+
+	&__img {
+		@include box(48px);
+		object-fit: cover;
+		@media (max-width: 991px) {
+			@include box(40px);
+		}
+	}
+
+	&__info {
+		@include flex(column, flex-start, flex-start, 8px);
+		@media (max-width: 991px) {
+			gap: 4px;
+		}
+		h2 {
+			@include text-style(20px, 500, 26px);
+			@media (max-width: 991px) {
+				@include text-style(16px, 500, 20px);
+			}
+		}
+		p {
+			color: #7f7f86;
+			@include text-style(16px, 400, 22px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 400, 18px);
+			}
+		}
+	}
+}

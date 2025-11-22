@@ -1,0 +1,124 @@
+@use '../abstracts' as *;
+
+.subscription {
+	@include flex(row, center, center, 20px);
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 1px;
+		flex-direction: column;
+		gap: 2px;
+	}
+	&__left {
+		width: 50%;
+		@include flex(column, center, center, 20px);
+		padding: 40px;
+		align-self: stretch;
+		border-radius: 16px;
+		background: rgba(67, 67, 74, 0.8);
+		@media (max-width: 991px) {
+			padding: 24px 12px;
+			gap: 16px;
+			width: 100%;
+		}
+	}
+
+	&__left-title {
+		color: $white;
+		@include text-style(28px, 500, 34px, center);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px, center);
+		}
+	}
+
+	&__left-form {
+		width: 100%;
+		@include flex(row, center, center, 8px);
+	}
+
+	&__left-input {
+		padding: 12px 16px;
+		flex: 1 0 0;
+		color: $white;
+		@include text-style(16px, 400, 22px);
+		border-radius: 8px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.2);
+		@include transition;
+		&:hover {
+			border-color: $white;
+		}
+		&::placeholder {
+			color: $white;
+			opacity: 1;
+		}
+		@media (max-width: 991px) {
+			height: 40px;
+			padding: 8px 12px;
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__left-btn {
+		@include center;
+		@include box(fit-content, 46px, 200px);
+		padding: 12px 45px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border: 1px solid $green;
+		background: $green;
+		@include transition;
+		&:hover {
+			color: $green;
+			background: $white;
+		}
+		@media (max-width: 991px) {
+			padding: 8px 16px;
+			height: 40px;
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__right {
+		position: relative;
+		width: 50%;
+		@include flex(column, center, center, 20px);
+		padding: 40px;
+		align-self: stretch;
+		border-radius: 16px;
+		background: rgba(55, 128, 229, 0.8);
+		overflow: hidden;
+		@media (max-width: 991px) {
+			padding: 24px 12px;
+			gap: 16px;
+			width: 100%;
+		}
+	}
+
+	&__right-bg-element {
+		position: absolute;
+		left: -33px;
+		top: 27px;
+		@media (max-width: 991px) {
+			left: -14px;
+			top: 18px;
+		}
+	}
+
+	&__right-link {
+		@include flex(row, center, center, 20px);
+		color: $white;
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			gap: 8px;
+		}
+	}
+
+	&__right-text {
+		color: $white;
+		@include text-style(16px, 400, 20px, center);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px, center);
+		}
+	}
+}

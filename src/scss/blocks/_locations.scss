@@ -1,0 +1,312 @@
+@use '../abstracts' as *;
+
+.locations {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__top {
+		@include flex(row, flex-start, center);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+			margin-bottom: 8px;
+		}
+	}
+
+	&__top-left {
+		width: fit-content;
+		@include flex(row, flex-start, center);
+	}
+
+	&__title {
+		@include text-style(28px, 500, 34px);
+		white-space: nowrap;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+
+	&__top-right {
+		width: 100%;
+		@include center;
+		@media (max-width: 991px) {
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+
+	&__formats {
+		display: none;
+		@media (max-width: 991px) {
+			@include flex(row, center, center, 1px);
+			padding: 2px;
+			align-self: stretch;
+			border-radius: 200px;
+			background: rgba(255, 255, 255, 0.72);
+		}
+	}
+
+	&__format {
+		@include flex(row, center, center, 10px);
+		padding: 8px;
+		flex: 1 0 0;
+		color: #7f7f86;
+		@include text-style(13px, 400, 16px, center);
+		@include transition;
+		border: 1px solid $white;
+		border-radius: 200px;
+		&:hover {
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			background: $white;
+		}
+		&.active {
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			background: $white;
+		}
+	}
+
+	&__switcher {
+		@include flex(row, center, flex-start, 4px);
+		width: 600px;
+		padding: 2px;
+		border-radius: 10px;
+		background: rgba(0, 0, 0, 0.1);
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+	}
+
+	&__switch {
+		@include flex(row, center, flex-start, 2px);
+		padding: 6px 8px;
+		flex: 1 0 0;
+		color: #43434a;
+		@include text-style(16px, 400, 22px, center);
+		border-radius: 8px;
+		@include transition;
+		&:hover {
+			background: rgba(255, 255, 255, 0.72);
+		}
+		@media (max-width: 991px) {
+			padding: 4px 8px;
+			@include text-style(14px, 400, 18px, center);
+		}
+	}
+
+	&__switch.active {
+		background: rgba(255, 255, 255, 0.72);
+	}
+
+	&__body {
+		width: 100%;
+		@include flex(row, center, flex-start, 20px);
+		align-items: stretch;
+		@media (max-width: 991px) {
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+
+	&__left {
+		flex: 1 1 55%;
+		@media (max-width: 991px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__list-more {
+		display: none;
+		@media (max-width: 991px) {
+			@include box(100%, 30px);
+			margin-top: 4px;
+			@include flex(row, center, center, 4px);
+			padding: 8px 16px;
+			align-self: stretch;
+			color: #7f7f86;
+			@include text-style(13px, 400, 16px);
+			border-radius: 200px;
+			border: 1px solid $white;
+			background: $white;
+			@include transition;
+			&:hover {
+				color: $green;
+				border-color: $green;
+			}
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(2, 1fr);
+		@media (max-width: 1248px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+		@media (max-width: 991px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 4px;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__item {
+		@include flex(row, center, flex-start, 12px);
+		padding: 20px;
+		flex: 1 0 0;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+
+		@media (max-width: 991px) {
+			padding: 16px;
+			display: none; // ховаємо всі
+		}
+
+		// показуємо лише перші три на мобілці
+		&:nth-child(-n + 3) {
+			@media (max-width: 991px) {
+				display: flex;
+			}
+		}
+	}
+
+	&__item-info {
+		@include flex(column, flex-start, flex-start, 8px);
+		@media (max-width: 991px) {
+			gap: 4px;
+		}
+		h4 {
+			@include text-style(20px, 500, 26px);
+			@media (max-width: 991px) {
+				@include text-style(16px, 500, 20px);
+			}
+		}
+		a {
+			color: $black;
+			@include text-style(16px, 500, 22px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 500, 18px);
+			}
+		}
+		p {
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 500, 16px);
+			}
+		}
+	}
+
+	&__item-bottom {
+		@include flex(row, flex-start, center, 4px);
+	}
+
+	&__item-btn {
+		@include flex(row, center, center, 10px);
+		@include box(fit-content, 30px, 200px);
+		padding: 8px 12px;
+		flex: 1 0 0;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border: 1px solid $green;
+		background: $green;
+		@include transition;
+		@media (max-width: 991px) {
+			@include text-style(12px, 500, 16px);
+		}
+		&:hover {
+			color: $green;
+			background-color: $white;
+		}
+	}
+
+	&__item-plane {
+		@include center;
+		@include transition;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__item-img {
+		position: relative;
+		@include flex(column, center, flex-end, 10px);
+		flex-shrink: 0;
+		@include box(140px, 100%);
+		backdrop-filter: blur(8px);
+		@media (max-width: 991px) {
+			@include box(120px);
+			padding: 0;
+		}
+		&--mark {
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			@include center;
+			padding: 4px 8px;
+			color: #43434a;
+			@include text-style(14px, 400, 18px);
+			border-radius: 6px;
+			background: rgba(255, 255, 255, 0.8);
+			backdrop-filter: blur(4px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+		img {
+			border-radius: 8px;
+			@include box(100%);
+			object-fit: cover;
+		}
+	}
+
+	&__right {
+		flex: 1 1 45%;
+		@media (max-width: 991px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__right-title {
+		display: none;
+		@media (max-width: 991px) {
+			display: block;
+			@include text-style(20px, 500, 26px);
+			margin-bottom: 8px;
+		}
+	}
+
+	&__map {
+		border-radius: 8px;
+		overflow: hidden;
+		@include box(100%);
+		@media (max-width: 991px) {
+			@include box(100%, 300px);
+		}
+		iframe {
+			@include box(100%);
+		}
+	}
+
+	&__right-btn {
+		display: none;
+		@media (max-width: 991px) {
+			margin-top: 16px;
+			@include center;
+			@include box(100%, 34px, 200px);
+			padding: 8px 16px;
+			color: $white;
+			@include text-style(14px, 500, 18px, center);
+			border: 1px solid $green;
+			background: $green;
+			@include transition;
+		}
+		&:hover {
+			color: $green;
+			background: $white;
+		}
+	}
+}

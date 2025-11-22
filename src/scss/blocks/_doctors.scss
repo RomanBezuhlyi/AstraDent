@@ -1,0 +1,141 @@
+@use '../abstracts' as *;
+
+.doctors {
+	background: $bg !important;
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__top {
+		width: 100%;
+		@include flex(row, space-between, center, 8px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			gap: 8px;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__title {
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+
+	&__link {
+		@include flex(row, center, center, 4px);
+		padding: 4px 8px 4px 12px;
+		border-radius: 200px;
+		background: $white;
+		@media (max-width: 991px) {
+			padding: 4px 8px 4px 12px;
+			gap: 4px;
+		}
+		span {
+			leading-trim: both;
+			text-edge: cap;
+			@include text-style(14px, 500, 18px);
+			letter-spacing: 0.28px;
+			text-transform: uppercase;
+			@media (max-width: 991px) {
+				@include text-style(13px, 500, 16px);
+			}
+		}
+	}
+
+	&__swiper {
+		@media (max-width: 991px) {
+			width: calc(100% + 12px);
+		}
+	}
+
+	&__item-img {
+		position: relative;
+		height: 288px;
+		overflow: hidden;
+		margin-bottom: 4px;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+		img {
+			@include box(100%);
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	}
+
+	&__item-img--years {
+		position: absolute;
+		left: 4px;
+		bottom: 32px;
+		@include flex(row, center, center, 6px);
+		padding: 4px 8px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(4px);
+		@media (max-width: 991px) {
+			bottom: 28px;
+			@include text-style(12px, 400, 16px);
+		}
+		img {
+			@include box(16px);
+		}
+	}
+
+	&__item-img--reviews {
+		position: absolute;
+		left: 4px;
+		bottom: 4px;
+		@include flex(row, center, center, 6px);
+		padding: 4px 8px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(4px);
+		@media (max-width: 991px) {
+			bottom: 28px;
+			@include text-style(12px, 400, 16px);
+		}
+		img {
+			@include box(16px);
+		}
+	}
+
+	&__item-name {
+		@include text-style(20px, 500, 26px);
+		margin-bottom: 4px;
+		@media (max-width: 991px) {
+			bottom: 28px;
+			@include text-style(16px, 500, 20px);
+		}
+	}
+
+	&__item-text {
+		color: #7f7f86;
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			bottom: 28px;
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__swiper-pagination {
+		margin-top: 24px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 16px;
+		}
+		.swiper-pagination-bullet {
+			@include box(24px, 3px, 200px);
+			opacity: 0.2;
+			background: $green;
+			@include transition;
+			margin: 0 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+}

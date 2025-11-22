@@ -1,0 +1,90 @@
+@use '../abstracts' as *;
+
+.clients {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(28px, 500, 34px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			margin-bottom: 16px;
+		}
+	}
+
+	&__video {
+		position: relative;
+		height: 220px;
+		border-radius: 8px;
+		overflow: hidden;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+	}
+
+	&__video-bg {
+		@include centering;
+		z-index: 2;
+		@include center;
+		@include box(100%);
+		background: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.4) 0%,
+			rgba(0, 0, 0, 0.4) 100%
+		);
+	}
+
+	&__video-play {
+		@include center;
+		padding: 4px;
+		border-radius: 200px;
+		background: $green;
+	}
+
+	&__video-overlay {
+		@include centering;
+		z-index: 1;
+		@include box(100%);
+		object-fit: cover;
+	}
+
+	&__video-iframe {
+		@include box(100%);
+	}
+
+	&__name {
+		margin-top: 4px;
+		@include text-style(20px, 500, 26px);
+		margin-bottom: 4px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 500, 20px);
+		}
+	}
+
+	&__date {
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__pagination {
+		margin-top: 24px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 16px;
+		}
+		.swiper-pagination-bullet {
+			@include box(24px, 3px, 200px);
+			opacity: 0.2;
+			background: $green;
+			@include transition;
+			margin: 0 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+}

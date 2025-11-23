@@ -5,6 +5,7 @@ import { initClientsSwiper } from './modules/initClientsSwiper'
 import { initClientsVideo } from './modules/initClientsVideo'
 import { initDoctorsSwiper } from './modules/initDoctorsSwiper'
 import { initDropdowns } from './modules/initDropdowns'
+import { initFaq } from './modules/initFaq'
 import { initHeaderMobileMenu } from './modules/initHeaderMobileMenu'
 import { initHeroSwiper } from './modules/initHeroSwiper'
 import { initInsuranceSwiper } from './modules/initInsuranceSwiper'
@@ -14,6 +15,7 @@ import { initOpenCatalogMenu } from './modules/initOpenCatalogMenu'
 import { initPartnersSwiper } from './modules/initPartnersSwiper'
 import { initPhoneMask } from './modules/initPhoneMask'
 import { initPlayVideo } from './modules/initPlayVideo'
+import { initSpecialists } from './modules/initSpecialists'
 import { initThankModal } from './modules/initThankModal'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,4 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initPartnersSwiper()
 	initClientsSwiper()
 	initClientsVideo()
+	initSpecialists()
+	initFaq()
 })

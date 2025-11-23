@@ -1,0 +1,128 @@
+@use '../abstracts' as *;
+
+.doctors-intro {
+	@include flex(column, space-between, flex-start);
+	@include box(100%, 520px);
+	padding: 44px;
+	flex: 1 0 0;
+	border-radius: 16px;
+	background-image: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.32) 0%,
+			rgba(0, 0, 0, 0.32) 100%
+		),
+		url(../img/intro-doctors-page.png);
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 24px 0;
+	@media (max-width: 991px) {
+		margin: 2px 0;
+		margin-left: -12px;
+		width: calc(100% + 24px);
+		height: 320px;
+		padding: 16px 12px;
+	}
+
+	&__top {
+		@include flex(column, flex-start, flex-start, 12px);
+		@media (max-width: 991px) {
+			gap: 8px;
+		}
+	}
+
+	&__title {
+		color: $white;
+		@include text-style(36px, 500, 42px);
+		@media (max-width: 991px) {
+			@include text-style(24px, 500, 30px);
+		}
+	}
+
+	&__anchor {
+		@include center;
+		padding: 8px 12px;
+		@include text-style(16px, 500, 22px);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(4px);
+		@include transition;
+		&:hover {
+			color: $white;
+			background: $text;
+		}
+		@media (max-width: 991px) {
+			padding: 4px 8px;
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	&__bottom {
+		@include flex(column, flex-start, flex-start, 8px);
+		@media (max-width: 991px) {
+			gap: 4px;
+		}
+	}
+
+	&__search {
+		position: relative;
+		@include box(600px, 40px);
+		@media (max-width: 991px) {
+			width: 366px;
+		}
+
+		img {
+			position: absolute;
+			left: 12px;
+			top: 50%;
+			transform: translateY(-50%);
+			z-index: 2;
+		}
+		input {
+			position: relative;
+			@include box(100%);
+			@include flex(row, flex-start, center);
+			padding: 6px 12px 6px 40px;
+			align-self: stretch;
+			color: $white;
+			@include text-style(14px, 400, 18px);
+			border-radius: 6px;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			background: rgba(67, 67, 74, 0.8);
+			backdrop-filter: blur(8px);
+			z-index: 1;
+			@include transition;
+			&:focus {
+				border-color: $white;
+			}
+			&::placeholder {
+				color: #c5c5cc;
+				opacity: 1;
+			}
+			@media (max-width: 991px) {
+				@include text-style(13px, 400, 16px);
+			}
+		}
+	}
+
+	&__filters {
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			gap: 4px;
+		}
+	}
+
+	&__filter {
+		@include flex(row, center, center, 8px);
+		@include box(190px, 40px);
+		padding: 6px 12px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 6px;
+		background: $white;
+		@media (max-width: 991px) {
+			@include box(181px, 40px);
+			@include text-style(13px, 400, 16px);
+		}
+	}
+}

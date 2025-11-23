@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/img/favicon-16x16.png" />
+		<link rel="shortcut icon" type="image/png" href="/img/favicon-16x16.png" />
+		<title>AstraDent</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		<header class="top">
+	<div class="banner">
+		<img class="banner__bg-left" src="./img/bg-element.svg" alt="" />
+		<div class="container">
+			<div class="banner__content">
+				<div class="banner__text">
+					<img src="./img/loudspeaker.svg" alt="" />
+					<p>Відкриття нової клініки в м. Одеса</p>
+				</div>
+				<button class="banner__close">
+					<img src="./img/close-banner.svg" alt="" />
+				</button>
+			</div>
+		</div>
+		<img class="banner__bg-right" src="./img/bg-element.svg" alt="" />
+	</div>
+	<div class="header">
+		<div class="container">
+			<div class="header__content">
+				<div class="header__left">
+					<a class="header__logo" href="#"
+						><img src="./img/logo.svg" alt=""
+					/></a>
+					<div class="header__dropdown city">
+						<button class="header__dropdown-button">
+							<span class="header__dropdown-value"
+								>17 стоматологій в Києві та Львові</span
+							>
+							<span class="header__dropdown-arrow"
+								><img src="./img/chevron.svg" alt=""
+							/></span>
+						</button>
+						<div class="header__dropdown-content">
+							<div class="header__dropdown-option">
+								17 стоматологій в Києві та Львові
+							</div>
+							<div class="header__dropdown-option">
+								10 стоматологій в Козятині та Жмеринці
+							</div>
+							<div class="header__dropdown-option">
+								8 стоматологій в Жашкові та Крижополі
+							</div>
+						</div>
+					</div>
+
+					<div class="header__dropdown lang">
+						<button class="header__dropdown-button">
+							<span class="header__dropdown-value">UA</span>
+							<span class="header__dropdown-arrow"
+								><img src="./img/chevron.svg" alt=""
+							/></span>
+						</button>
+						<div class="header__dropdown-content">
+							<div class="header__dropdown-option">UA</div>
+							<div class="header__dropdown-option">RU</div>
+							<div class="header__dropdown-option">EN</div>
+						</div>
+					</div>
+				</div>
+				<div class="header__right">
+					<div class="header__socials">
+						<a class="header__social" href="#">
+							<img src="./img/facebook.svg" alt="" />
+						</a>
+						<a class="header__social" href="#">
+							<img src="./img/instagram.svg" alt="" />
+						</a>
+					</div>
+					<div class="header__numbers">
+						<a class="header__number" href="tel:0442223333">(044) 222 33 33</a>
+						<a class="header__number" href="tel:0632223333">(063) 222 33 33</a>
+					</div>
+					<button class="header__btn outline">Замовити дзвінок</button>
+					<button class="header__btn primary make-an-appointment">
+						Записатися на прийом
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar">
+		<div class="container">
+			<div class="navbar__content">
+				<div class="navbar__left">
+					<button class="navbar__btn">
+						<img src="./img/burger.svg" alt="" />Послуги
+					</button>
+					<nav class="navbar__nav">
+						<a class="navbar__link" href="#">Про нас</a>
+						<a class="navbar__link" href="#">Лікарі</a>
+						<a class="navbar__link" href="#">Ціни</a>
+						<a class="navbar__link" href="#"
+							>Акцii <span class="navbar__link-mark">7</span></a
+						>
+						<a class="navbar__link" href="#">Вiдгуки</a>
+						<a class="navbar__link" href="#">Клiнiки та контакти</a>
+					</nav>
+				</div>
+				<div class="navbar__right">
+					<div class="navbar__search">
+						<img class="navbar__search-icon" src="./img/search.svg" alt="" />
+						<input
+							class="navbar__search-input"
+							type="text"
+							placeholder="Знайдемо усе"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<div class="catalog">
+				<h2 class="catalog__title">Стоматологічні послуги в Astra Dent</h2>
+				<div class="catalog__row">
+					<!-- Перша колонка -->
+					<ul class="catalog__col">
+						<li class="catalog__col-link" data-target="therapy">
+							Терапевтичне лікування
+							<img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="prosthetics">
+							Протезування зубів <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="kids">
+							Дитяча стоматологія <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="diagnostics">
+							Діагностика <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="sleep">
+							Медикаментозний сон <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="parodont">
+							Пародонтологія <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="surgery">
+							Хірургічна стоматологія
+							<img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="implants">
+							Імплантація зубів <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="ortho">
+							Ортодонт <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="hospital">
+							Операції у стаціонарі <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="whitening">
+							Відбілювання зубів <img src="./img/chevron-right.svg" alt="" />
+						</li>
+						<li class="catalog__col-link" data-target="lab">
+							Лабораторія Astra Dent
+							<img src="./img/chevron-right.svg" alt="" />
+						</li>
+					</ul>
+
+					<!-- Друга колонка -->
+					<ul class="catalog__col">
+						<!-- therapy -->
+						<li class="catalog__col-link-second" data-group="therapy">
+							<a href="#"
+								>Пломбування карієсу
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="therapy">
+							<a href="#"
+								>Лікування пульпіту <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- prosthetics -->
+						<li class="catalog__col-link-second" data-group="prosthetics">
+							<a href="#"
+								>Коронки з цирконію <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="prosthetics">
+							<a href="#"
+								>Знімні протези <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- kids -->
+						<li class="catalog__col-link-second" data-group="kids">
+							<a href="#"
+								>Фторування зубів <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="kids">
+							<a href="#"
+								>Лікування молочних зубів
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- diagnostics -->
+						<li class="catalog__col-link-second" data-group="diagnostics">
+							<a href="#"
+								>Рентген зубів <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="diagnostics">
+							<a href="#"
+								>КТ щелепи <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- sleep -->
+						<li class="catalog__col-link-second" data-group="sleep">
+							<a href="#"
+								>Седація для дорослих
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="sleep">
+							<a href="#"
+								>Седація для дітей <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- parodont -->
+						<li class="catalog__col-link-second" data-group="parodont">
+							<a href="#"
+								>Чистка пародонтальних кишень
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="parodont">
+							<a href="#"
+								>Лікування гінгівіту
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- surgery -->
+						<li class="catalog__col-link-second" data-group="surgery">
+							<a href="#"
+								>Видалення зуба мудрості
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="surgery">
+							<a href="#"
+								>Резекція кореня <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- implants -->
+						<li class="catalog__col-link-second" data-group="implants">
+							<a href="#"
+								>Одноетапна імплантація
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="implants">
+							<a href="#"
+								>Класична імплантація
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- ortho -->
+						<li class="catalog__col-link-second" data-group="ortho">
+							<a href="#"
+								>Брекет-системи <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="ortho">
+							<a href="#"
+								>Елайнери <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- hospital -->
+						<li class="catalog__col-link-second" data-group="hospital">
+							<a href="#"
+								>Стаціонарне спостереження
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="hospital">
+							<a href="#"
+								>Хірургічні операції
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- whitening -->
+						<li class="catalog__col-link-second" data-group="whitening">
+							<a href="#"
+								>Zoom-відбілювання <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="whitening">
+							<a href="#"
+								>Домашнє відбілювання
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+
+						<!-- lab -->
+						<li class="catalog__col-link-second" data-group="lab">
+							<a href="#"
+								>Виготовлення кап <img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+						<li class="catalog__col-link-second" data-group="lab">
+							<a href="#"
+								>Моделювання протезів
+								<img src="./img/chevron-right.svg" alt="" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<img
+					class="catalog__bg-element"
+					src="./img/bg-element-catalog.svg"
+					alt=""
+				/>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile">
+		<div class="container">
+			<div class="header-mobile__content">
+				<div class="header-mobile__top">
+					<div class="header-mobile__left">
+						<a class="header-mobile__logo" href="#"
+							><img src="./img/logo-footer.svg" alt=""
+						/></a>
+					</div>
+					<div class="header-mobile__right">
+						<button class="header-mobile__btn-search">
+							<img src="./img/search.svg" alt="" />
+						</button>
+						<ul class="header-mobile__langs hide">
+							<li class="header-mobile__lang active">UA</li>
+							<li class="header-mobile__dot"></li>
+							<li class="header-mobile__lang">EN</li>
+							<li class="header-mobile__dot"></li>
+							<li class="header-mobile__lang">RU</li>
+						</ul>
+						<button class="header-mobile__btn open">
+							<img src="./img/burger.svg" alt="" />
+							Меню
+						</button>
+						<button class="header-mobile__btn close hide">
+							<img src="./img/close-menu.svg" alt="" />
+						</button>
+					</div>
+				</div>
+				<div class="header-mobile__bottom">
+					<div class="header-mobile__search">
+						<img src="./img/search.svg" alt="" />
+						<input
+							type="text"
+							placeholder="Пошук по послугах, лікаріх, хворобах"
+						/>
+					</div>
+					<ul class="header-mobile__list">
+						<li class="header-mobile__item">
+							<div class="header-mobile__item-top">
+								<p>Послуги</p>
+								<img src="./img/chevron-right.svg" alt="" />
+							</div>
+							<div class="header-mobile__item-bottom">
+								<ul class="header-mobile__sub-list">
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Відбілювання зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Терапевтичне лікування
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Імплантація зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Лікування ясен
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Протезування зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Хірургічна стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Дитяча стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Виправлення прикусу
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-mobile__item">
+							<div class="header-mobile__item-top">
+								<p>Про Astra Dent</p>
+								<img src="./img/chevron-right.svg" alt="" />
+							</div>
+							<div class="header-mobile__item-bottom">
+								<ul class="header-mobile__sub-list">
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Відбілювання зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Терапевтичне лікування
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Імплантація зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Лікування ясен
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Протезування зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Хірургічна стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Дитяча стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Виправлення прикусу
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-mobile__item">
+							<div class="header-mobile__item-top">
+								<p>Лікарі</p>
+								<img src="./img/chevron-right.svg" alt="" />
+							</div>
+							<div class="header-mobile__item-bottom">
+								<ul class="header-mobile__sub-list">
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Відбілювання зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Терапевтичне лікування
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Імплантація зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Лікування ясен
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Протезування зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Хірургічна стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Дитяча стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Виправлення прикусу
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-mobile__item">
+							<div class="header-mobile__item-top">
+								<p>Ціни</p>
+								<img src="./img/chevron-right.svg" alt="" />
+							</div>
+							<div class="header-mobile__item-bottom">
+								<ul class="header-mobile__sub-list">
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Відбілювання зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Терапевтичне лікування
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Імплантація зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Лікування ясен
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Протезування зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Хірургічна стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Дитяча стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Виправлення прикусу
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-mobile__item">
+							<div class="header-mobile__item-top">
+								<p>Акціі</p>
+								<img src="./img/chevron-right.svg" alt="" />
+							</div>
+							<div class="header-mobile__item-bottom">
+								<ul class="header-mobile__sub-list">
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Відбілювання зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Терапевтичне лікування
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Імплантація зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Лікування ясен
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Протезування зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Хірургічна стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Дитяча стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Виправлення прикусу
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="header-mobile__item">
+							<div class="header-mobile__item-top">
+								<p>Клініки та контакти</p>
+								<img src="./img/chevron-right.svg" alt="" />
+							</div>
+							<div class="header-mobile__item-bottom">
+								<ul class="header-mobile__sub-list">
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Відбілювання зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Терапевтичне лікування
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Імплантація зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Лікування ясен
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Протезування зубів
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Хірургічна стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Дитяча стоматологія
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+									<li class="header-mobile__sub-item">
+										<div class="header-mobile__sub-item--top">
+											Виправлення прикусу
+											<img src="./img/chevron-right.svg" alt="" />
+										</div>
+										<div class="header-mobile__sub-item--bottom">
+											<a href="#">Кариес</a>
+											<a href="#">Пломбирование</a>
+											<a href="#">Каналы</a>
+											<a href="#">Каналы под микроскопом</a>
+											<a href="#">Десны</a>
+											<a href="#">Чистка зубов</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<div class="header-mobile__btns">
+						<button class="header-mobile__btns--outline">
+							Замовити дзвінок
+						</button>
+						<button class="header-mobile__btns--primary make-an-appointment">
+							Запис на прийом
+						</button>
+					</div>
+					<div class="header-mobile__phones">
+						<a class="header-mobile__phone" href="#">
+							<span class="phone">
+								<img src="./img/phone.svg" alt="" />
+								+38 (093) 168 93 83
+							</span>
+							<span class="city">Київ</span>
+						</a>
+						<a class="header-mobile__phone" href="#">
+							<span class="phone">
+								<img src="./img/phone.svg" alt="" />
+								+38 (067) 168 93 83
+							</span>
+							<span class="city">Львів</span>
+						</a>
+					</div>
+					<div class="header-mobile__social">
+						<p class="header-mobile__social--title">Месенджери та соцмережі</p>
+						<ul class="header-mobile__social--list">
+							<li class="header-mobile__social--item">
+								<a class="header-mobile__social--link" href="#">
+									<img src="./img/f-facebook.svg" alt="" />
+								</a>
+							</li>
+							<li class="header-mobile__social--item">
+								<a class="header-mobile__social--link" href="#">
+									<img src="./img/f-instagram.svg" alt="" />
+								</a>
+							</li>
+							<li class="header-mobile__social--item">
+								<a class="header-mobile__social--link" href="#">
+									<img src="./img/f-youtube.svg" alt="" />
+								</a>
+							</li>
+							<li class="header-mobile__social--item">
+								<a class="header-mobile__social--link" href="#">
+									<img src="./img/f-telegram.svg" alt="" />
+								</a>
+							</li>
+							<li class="header-mobile__social--item">
+								<a class="header-mobile__social--link" href="#">
+									<img src="./img/f-viber.svg" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="mobile-nav">
+	<div class="container">
+		<nav class="mobile-nav__menu">
+			<a class="mobile-nav__link" href="#">
+				<img src="./img/menu-nav-1.svg" alt="" />
+				Послуги
+			</a>
+			<a class="mobile-nav__link" href="#">
+				<img src="./img/menu-nav-2.svg" alt="" />
+				Стоматологіі
+			</a>
+			<a class="mobile-nav__link" href="#">
+				<img src="./img/menu-nav-3.svg" alt="" />
+				Онлайн заявка
+			</a>
+			<a class="mobile-nav__link" href="#">
+				<img src="./img/menu-nav-4.svg" alt="" />
+				Подзвонити
+			</a>
+		</nav>
+		<a class="mobile-nav__btn" href="#">
+			<img src="./img/link.svg" alt="" />
+		</a>
+	</div>
+</div>
+
+		<main>
+			<div class="container">
+				<section class="hero">
+	<div class="hero__left">
+		<div class="hero__card">
+			<video class="hero__video" controls>
+				<source
+					src="https://cdn.create.vista.com/api/media/medium/394533170/stock-video-smiling-dentist-meeting-talking-patient-clinic?token="
+					type="video/mp4"
+				/>
+				Ваш браузер не підтримує відео-тег.
+			</video>
+			<div class="hero__card-info">
+				<div class="hero__card-content">
+					<h1 class="hero__card-title">
+						Astra Dent — найбільша мережа стоматологій в Україні
+					</h1>
+					<button class="hero__card-btn primary">Дізнатися більше</button>
+				</div>
+				<button class="hero__card-play">
+					<img src="./img/play.svg" alt="" />
+				</button>
+			</div>
+		</div>
+	</div>
+	<div class="hero__right swiper">
+		<button class="hero__right-prev">
+			<img src="./img/arrow-left.svg" alt="" />
+		</button>
+		<div class="swiper-wrapper">
+			<div class="hero__card hero__card-small swiper-slide">
+				<a class="hero__card-link" href="#"
+					><img src="./img/shape.svg" alt=""
+				/></a>
+				<img class="hero__img" src="./img/hero-slide-1.jpg" alt="" />
+				<div class="hero__card-content--small">
+					<h1 class="hero__card-title--small">
+						Акція на професійну гігієну: -50% у Києві та Львові!
+					</h1>
+					<button class="hero__card-btn--small primary">
+						Дізнатися більше
+					</button>
+				</div>
+			</div>
+			<div class="hero__card hero__card-small swiper-slide">
+				<a class="hero__card-link" href="#"
+					><img src="./img/shape.svg" alt=""
+				/></a>
+				<img class="hero__img" src="./img/hero-slide-2.jpg" alt="" />
+				<div class="hero__card-content--small">
+					<h1 class="hero__card-title--small">
+						Стоматологічний Чек-ап за 2020 ₴
+					</h1>
+					<button class="hero__card-btn--small primary">
+						Дізнатися більше
+					</button>
+				</div>
+			</div>
+			<div class="hero__card hero__card-small swiper-slide">
+				<a class="hero__card-link" href="#"
+					><img src="./img/shape.svg" alt=""
+				/></a>
+				<img class="hero__img" src="./img/hero-slide-1.jpg" alt="" />
+				<div class="hero__card-content--small">
+					<h1 class="hero__card-title--small">
+						Акція на професійну гігієну: -50% у Києві та Львові!
+					</h1>
+					<button class="hero__card-btn--small primary">
+						Дізнатися більше
+					</button>
+				</div>
+			</div>
+			<div class="hero__card hero__card-small swiper-slide">
+				<a class="hero__card-link" href="#"
+					><img src="./img/shape.svg" alt=""
+				/></a>
+				<img class="hero__img" src="./img/hero-slide-2.jpg" alt="" />
+				<div class="hero__card-content--small">
+					<h1 class="hero__card-title--small">
+						Стоматологічний Чек-ап за 2020 ₴
+					</h1>
+					<button class="hero__card-btn--small primary">
+						Дізнатися більше
+					</button>
+				</div>
+			</div>
+		</div>
+		<button class="hero__right-next">
+			<img src="./img/arrow-right.svg" alt="" />
+		</button>
+		<div class="hero__right-pagination"></div>
+	</div>
+</section>
+<section class="section services">
+	<div class="services__top">
+		<h2 class="services__title">Популярні послуги</h2>
+		<a class="services__link" href="#">
+			<span>усі</span>
+			<span>112</span>
+			<img src="./img/chevron-right.svg" alt="" />
+		</a>
+	</div>
+	<ul class="services__list">
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-1.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Відбілювання зубів</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-2.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Вініри</h4>
+					<p class="services__item-text">вiд 500$</p>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-3.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Імплантація зубів</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-4.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Лікування зубів</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-5.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Лікування ясен</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<span class="services__item-mark">Є акція</span>
+				<img class="services__item-img" src="./img/service-6.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Протезування зубів</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-7.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Хірургічна стоматологія</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-8.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Дитяча стоматологія</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-9.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Виправлення прикусу</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-10.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">Лікування кореневих каналів</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item accent">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-11.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">
+						Хірургічний стаціонар Astra Clinic
+					</h4>
+				</div>
+			</a>
+		</li>
+		<li class="services__item accent">
+			<a class="services__item-link" href="#">
+				<img class="services__item-img" src="./img/service-12.svg" alt="" />
+				<div class="services__item-info">
+					<h4 class="services__item-title">
+						Зуботехнічна лабораторія Astra Dent
+					</h4>
+				</div>
+			</a>
+		</li>
+	</ul>
+</section>
+
+				<section class="advantages section">
+	<h2 class="advantages__title">
+		Чому <span>250 000+</span> пацієнтів обирають Astra Dent
+	</h2>
+	<ul class="advantages__list">
+		<li class="advantages__item">
+			<img class="advantages__img" src="./img/adv-1.svg" alt="" />
+			<div class="advantages__info">
+				<h4>Все для вашої усмішки в одному місці</h4>
+				<p>
+					Від профілактики й лікування карієсу до імплантації та естетичної
+					стоматології.
+				</p>
+			</div>
+		</li>
+		<li class="advantages__item">
+			<img class="advantages__img" src="./img/adv-2.svg" alt="" />
+			<div class="advantages__info">
+				<h4>Команда — понад 100 досвідчених лікарів</h4>
+				<p>
+					Які навчаються в Україні та за кордоном і працюють з обладнанням
+					світових брендів.
+				</p>
+			</div>
+		</li>
+		<li class="advantages__item">
+			<img class="advantages__img" src="./img/adv-3.svg" alt="" />
+			<div class="advantages__info">
+				<h4>Зручність для всієї сім’ї</h4>
+				<p>Лікуємо дорослих і дітей у всіх районах столиці та у Львові.</p>
+			</div>
+		</li>
+	</ul>
+</section>
+<div class="tape">
+	<ul class="tape__list">
+		<li class="tape__item">29654 лазерних відбілювань</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">12993 професійних чисток</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">14993 видалених зубів</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">278222 щасливих посмішок</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">278 кращих з кращих лікарів</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+	</ul>
+	<ul class="tape__list">
+		<li class="tape__item">29654 лазерних відбілювань</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">12993 професійних чисток</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">14993 видалених зубів</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">278222 щасливих посмішок</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+		<li class="tape__item">278 кращих з кращих лікарів</li>
+		<li class="tape__item"><img src="./img/ellipse.svg" alt="" /></li>
+	</ul>
+</div>
+
+				<section class="section reviews">
+	<h2 class="reviews__title">Незалежна оцінка стоматологій Astra Dent</h2>
+	<div class="reviews__list">
+		<a class="reviews__item" href="#">
+			<img class="reviews__item-logo" src="./img/reviews-facebook.svg" alt="" />
+			<div class="reviews__bottom">
+				<div class="reviews__bottom-block">
+					<img class="desktop" src="./img/reviews-stars.svg" alt="" />
+					<img class="mobile" src="./img/reviews-star.svg" alt="" />
+					<span class="desktop">4.7 балів</span>
+					<span class="mobile">4.7</span>
+				</div>
+				<div class="reviews__bottom-block">
+					<img src="./img/reviews-topic.svg" alt="" />
+					<span class="desktop">11 200 відгуків</span>
+					<span class="mobile">11k</span>
+				</div>
+			</div>
+		</a>
+		<a class="reviews__item" href="#">
+			<img class="reviews__item-logo" src="./img/reviews-google.svg" alt="" />
+			<div class="reviews__bottom">
+				<div class="reviews__bottom-block">
+					<img class="desktop" src="./img/reviews-stars.svg" alt="" />
+					<img class="mobile" src="./img/reviews-star.svg" alt="" />
+					<span class="desktop">5.0 балів</span>
+					<span class="mobile">5.0</span>
+				</div>
+				<div class="reviews__bottom-block">
+					<img src="./img/reviews-topic.svg" alt="" />
+					<span class="desktop">20 200 відгуків</span>
+					<span class="mobile">20k</span>
+				</div>
+			</div>
+		</a>
+		<a class="reviews__item" href="#">
+			<img class="reviews__item-logo" src="./img/reviews-top.svg" alt="" />
+			<div class="reviews__bottom">
+				<div class="reviews__bottom-block">
+					<img class="desktop" src="./img/reviews-stars.svg" alt="" />
+					<img class="mobile" src="./img/reviews-star.svg" alt="" />
+					<span class="desktop">4.8 балів</span>
+					<span class="mobile">4.8</span>
+				</div>
+				<div class="reviews__bottom-block">
+					<img src="./img/reviews-topic.svg" alt="" />
+					<span class="desktop">9 500 відгуків</span>
+					<span class="mobile">9k</span>
+				</div>
+			</div>
+		</a>
+	</div>
+</section>
+<section class="locations section">
+	<div class="locations__top">
+		<div class="locations__top-left">
+			<h2 class="locations__title">Наші стоматологіі</h2>
+		</div>
+		<div class="locations__top-right">
+			<div class="locations__formats">
+				<button class="locations__format active" type="button">Списком</button>
+				<button class="locations__format" type="button">На мапі</button>
+			</div>
+			<div class="locations__switcher">
+				<button class="locations__switch active" type="button">
+					16 філій Києва
+				</button>
+				<button class="locations__switch" type="button">Львів</button>
+				<button class="locations__switch" type="button">Варшава</button>
+			</div>
+		</div>
+	</div>
+	<div class="locations__body">
+		<div class="locations__left">
+			<ul class="locations__list">
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Astra Dent Опера</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Володимирська, 51-53</p>
+						<p>з 8.00 до 22.00 без вихідних</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<span class="locations__item-img--mark">Стаціонар</span>
+						<img src="./img/location-1.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Лівобережна</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Є. Сверстюка, 3-Г</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-2.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Astra Clinic</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Святошинська, 3а</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-3.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Лук'янівська</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Ю. Іллєнка, 5Б</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-4.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Вишгородська</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Вишгородська, 31А</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-5.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Борщагівка</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Якуба Коласа, 17</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-6.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Дарницька Площа (ТЦ Дарниця)</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>пр-т Миру, 3</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-7.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Дарниця Метро (ТЦ DOMA Center)</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Будівельників, 40</p>
+						<p>з 8.00 до 22.00 без вихідних</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-8.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Поділ</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Верхній Вал, 28-30</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-9.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Харківська</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>Харківське шосе, 152</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-10.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Святошин</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Святошинська, 3а</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-11.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Солом'янка</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Кірпи, 5Б</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-12.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Оболонь</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>пр-т Володимира Івасюка (Героїв Сталінграда), 12-Г корпус 2</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-13.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Велика Васильківська (ex. Льва Толстого)</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Велика Васильківська, 25</p>
+						<p>з 8.00 до 22.00 без вихідних</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-14.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>ВДНГ</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Васильківська, 100-А</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-15.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Шевченка</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>пр. Шевченка, 7</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-16.png" alt="" />
+					</div>
+				</li>
+			</ul>
+			<button class="locations__list-more">
+				Показати ще 10 <img src="./img/chevron.svg" alt="" />
+			</button>
+		</div>
+		<div class="locations__right">
+			<h2 class="locations__right-title">Astra Dent в Києві</h2>
+			<div class="locations__map">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7528288.057192051!2d13.0760952528606!3d-22.87934318179411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bf53c7e6ed37521%3A0xd3b9e5a5a8ecb261!2z0J3QsNC80ZbQsdGW0Y8!5e0!3m2!1suk!2sua!4v1763822883260!5m2!1suk!2sua"
+					style="border: 0"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				></iframe>
+			</div>
+			<button class="locations__right-btn">
+				Отримати консультацію по лікуванню
+			</button>
+		</div>
+	</div>
+</section>
+<section class="doctors section">
+	<div class="doctors__top">
+		<h2 class="doctors__title">Провідні лікарі Astra Dent</h2>
+		<a class="doctors__link" href="#">
+			<span>усі</span>
+			<span>54</span>
+			<img src="./img/chevron-right.svg" alt="" />
+		</a>
+	</div>
+	<div class="doctors__swiper swiper">
+		<ul class="doctors__list swiper-wrapper">
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-1.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						18 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						122 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Мацієвський Антон Сергійович</h4>
+				<p class="doctors__item-text">
+					Ортопед, хірург-імплантолог терапевт, хірург
+				</p>
+			</li>
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-2.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						12 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						78 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Андріяшик Роман Іванович</h4>
+				<p class="doctors__item-text">Терапевт</p>
+			</li>
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-3.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						21 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						59 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Байда Наталія Жоржовна</h4>
+				<p class="doctors__item-text">Терапевт</p>
+			</li>
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-4.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						17 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						35 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Алаткін Євген Костянтинович</h4>
+				<p class="doctors__item-text">Ортопед, хірург, хірург-імплантолог</p>
+			</li>
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-5.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						10 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						16 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Кручковська Ганна Володимирівна</h4>
+				<p class="doctors__item-text">Терапевт</p>
+			</li>
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-6.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						19 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						16 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Залінян Ліа Вардгесівна</h4>
+				<p class="doctors__item-text">Терапевт, дитячий прийом, пародонтолог</p>
+			</li>
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-5.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						10 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						16 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Кручковська Ганна Володимирівна</h4>
+				<p class="doctors__item-text">Терапевт</p>
+			</li>
+			<li class="doctors__item swiper-slide">
+				<div class="doctors__item-img">
+					<img src="./img/doctor-6.png" alt="" />
+					<p class="doctors__item-img--years">
+						<img src="./img/doctor.svg" alt="" />
+						19 рокiв
+					</p>
+					<p class="doctors__item-img--reviews">
+						<img src="./img/topic.svg" alt="" />
+						16 відгуків
+					</p>
+				</div>
+				<h4 class="doctors__item-name">Залінян Ліа Вардгесівна</h4>
+				<p class="doctors__item-text">Терапевт, дитячий прийом, пародонтолог</p>
+			</li>
+		</ul>
+		<div class="doctors__swiper-pagination"></div>
+	</div>
+</section>
+<section class="insurance section">
+	<h2 class="insurance__title">Співпрацюємо зі страховими компаніями:</h2>
+	<div class="insurance__swiper swiper">
+		<ul class="insurance__list swiper-wrapper">
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-1.svg" alt="" />
+			</li>
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-2.svg" alt="" />
+			</li>
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-3.svg" alt="" />
+			</li>
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-4.svg" alt="" />
+			</li>
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-5.svg" alt="" />
+			</li>
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-6.svg" alt="" />
+			</li>
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-7.svg" alt="" />
+			</li>
+			<li class="insurance__item swiper-slide">
+				<img src="./img/i-8.svg" alt="" />
+			</li>
+		</ul>
+		<div class="insurance__pagination"></div>
+	</div>
+</section>
+<section class="partners section">
+	<h2 class="partners__title">Партнери Astra Dent</h2>
+	<div class="partners__swiper swiper">
+		<ul class="partners__list swiper-wrapper">
+			<li class="partners__item swiper-slide">
+				<a class="partners__card" href="#">
+					<div class="partners__link">
+						<img src="./img/shape.svg" alt="" />
+					</div>
+					<img class="partners__img" src="./img/partner-1.png" alt="" />
+					<div class="partners__info">
+						<p>Безкоштовна імплантація для військових</p>
+					</div>
+				</a>
+			</li>
+			<li class="partners__item swiper-slide">
+				<a class="partners__card" href="#">
+					<div class="partners__link">
+						<img src="./img/shape.svg" alt="" />
+					</div>
+					<img class="partners__img" src="./img/partner-2.png" alt="" />
+					<div class="partners__info">
+						<p>Лікування військових патронатної служби Янголи</p>
+					</div>
+				</a>
+			</li>
+			<li class="partners__item swiper-slide">
+				<a class="partners__card" href="#">
+					<div class="partners__link">
+						<img src="./img/shape.svg" alt="" />
+					</div>
+					<img class="partners__img" src="./img/partner-3.jpg" alt="" />
+					<div class="partners__info">
+						<p>
+							White Dental Group - офіційний предстваник Straumann та Neodent
+						</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<div class="partners__pagination"></div>
+	</div>
+</section>
+<section class="clients section">
+	<h2 class="clients__title">Історіі наших клієнтів</h2>
+	<div class="clients__swiper swiper">
+		<ul class="clients__list swiper-wrapper">
+			<li class="clients__item swiper-slide">
+				<div class="clients__video">
+					<div class="clients__video-bg">
+						<button class="clients__video-play">
+							<img src="./img/play.svg" alt="" />
+						</button>
+					</div>
+					<img class="clients__video-overlay" src="./img/client-1.jpg" alt="" />
+					<iframe
+						class="clients__video-iframe"
+						src="https://www.youtube.com/embed/B-8NJvS--dw?si=cFb8SCKFz1uxJ3aM"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+				<h4 class="clients__name">Ярослав Березовський</h4>
+				<p class="clients__date">25/09/2025</p>
+			</li>
+			<li class="clients__item swiper-slide">
+				<div class="clients__video">
+					<div class="clients__video-bg">
+						<button class="clients__video-play">
+							<img src="./img/play.svg" alt="" />
+						</button>
+					</div>
+					<img class="clients__video-overlay" src="./img/clien-2.png" alt="" />
+					<iframe
+						class="clients__video-iframe"
+						src="https://www.youtube.com/embed/B-8NJvS--dw?si=cFb8SCKFz1uxJ3aM"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+				<h4 class="clients__name">Ярослав Березовський</h4>
+				<p class="clients__date">25/09/2025</p>
+			</li>
+			<li class="clients__item swiper-slide">
+				<div class="clients__video">
+					<div class="clients__video-bg">
+						<button class="clients__video-play">
+							<img src="./img/play.svg" alt="" />
+						</button>
+					</div>
+					<img class="clients__video-overlay" src="./img/client-3.png" alt="" />
+					<iframe
+						class="clients__video-iframe"
+						src="https://www.youtube.com/embed/B-8NJvS--dw?si=cFb8SCKFz1uxJ3aM"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+				<h4 class="clients__name">Ярослав Березовський</h4>
+				<p class="clients__date">25/09/2025</p>
+			</li>
+			<li class="clients__item swiper-slide">
+				<div class="clients__video">
+					<div class="clients__video-bg">
+						<button class="clients__video-play">
+							<img src="./img/play.svg" alt="" />
+						</button>
+					</div>
+					<img class="clients__video-overlay" src="./img/client-4.png" alt="" />
+					<iframe
+						class="clients__video-iframe"
+						src="https://www.youtube.com/embed/B-8NJvS--dw?si=cFb8SCKFz1uxJ3aM"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+				<h4 class="clients__name">Ярослав Березовський</h4>
+				<p class="clients__date">25/09/2025</p>
+			</li>
+			<li class="clients__item swiper-slide">
+				<div class="clients__video">
+					<div class="clients__video-bg">
+						<button class="clients__video-play">
+							<img src="./img/play.svg" alt="" />
+						</button>
+					</div>
+					<img class="clients__video-overlay" src="./img/client-1.jpg" alt="" />
+					<iframe
+						class="clients__video-iframe"
+						src="https://www.youtube.com/embed/B-8NJvS--dw?si=cFb8SCKFz1uxJ3aM"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin"
+						allowfullscreen
+					></iframe>
+				</div>
+				<h4 class="clients__name">Ярослав Березовський</h4>
+				<p class="clients__date">25/09/2025</p>
+			</li>
+		</ul>
+		<div class="clients__pagination"></div>
+	</div>
+</section>
+
+				<section class="info section">
+	<h2>Послуги стоматолога від "А" до "Я" очікують Вас в Astra Dent.</h2>
+	<br />
+	<p>
+		Мережа стоматологій у різних районах міста, більше 100 досвідчених лікарів,
+		сервіс європейського рівня — вже 18 років Astra Dent турбується про ваші
+		посмішки! Команда фахівців мережі стоматологій в Києві та Львові Astra Dent
+		надає повний комплекс послуг у сфері дентальної медицини.
+	</p>
+	<br />
+	<p>
+		<strong
+			>5 фактів, чому варто довірити турботу про свої зуби Astra Dent:</strong
+		>
+	</p>
+	<ol>
+		<li>
+			Повний комплекс стоматологічних послуг. Наші фахівці допоможуть із
+			ефективним лікуванням найрізноманітніших проблем ротової порожнини
+			будь-якого рівня складності.
+		</li>
+		<li>
+			Висококваліфіковані лікарі. Стоматологи Astra Dent регулярно відвідують
+			фахові майстер-класи і стажування в Україні та за кордоном, аби бути у
+			курсі усіх сучасних тенденцій дентальної медицини.
+		</li>
+		<li>
+			Всі стоматології Astra Dent оснащені сучасною технікою світових лідерів у
+			виробництві стоматологічного обладнання Seiler, Sirona, Carl Zeiss та
+			використовують лише високоякісні сертифіковані матеріали від провідних
+			компаній, таких як Dentsply, 3M, EMS.
+		</li>
+		<li>
+			Сімейна стоматологія. У мережі Astra Dent надають стоматологічні послуги
+			як дорослим, так і дітям.
+		</li>
+		<li>
+			Зручність: не має потреби витрачати час на дорогу заради якісного
+			стоматологічного лікування – філіали Astra Dent є у кожному районі міста.
+			Просто оберіть серед усіх стоматологій найзручнішу для вас.
+		</li>
+	</ol>
+	<br />
+	<p>
+		Все ще маєте сумніви? Записуйтесь на безкоштовний прийом та переконайтесь у
+		якості послуг самі: 044 222 33 33
+	</p>
+	<br />
+	<p>
+		Зверніть увагу! У нашій мережі є спеціально адаптовані відділення для
+		безбарʼєрного лікування. Це відділення за наступними адресами:
+	</p>
+	<ul>
+		<li>вул. Святошинська, 3а</li>
+		<li>Харківське шосе, 152</li>
+		<li>вул. Васильківська, 100-А</li>
+		<li>вул. Будівельників, 40 (зі спецліфтом).</li>
+	</ul>
+</section>
+<section class="section form">
+	<h2 class="form__title-mobile">Потрібна консультація?</h2>
+	<div class="form__block">
+		<div class="form__block-left">
+			<img src="./img/form.png" alt="" />
+		</div>
+		<div class="form__block-right">
+			<h2 class="form__block-title">
+				Записати вас на безкоштовну консультацію
+			</h2>
+			<p class="form__block-text">
+				Залиште свій номер, ми зв'яжемося й підберемо для вас <br />
+				зручний час візиту
+			</p>
+			<form class="form__block-form">
+				<input
+					class="form__block-input"
+					type="text"
+					placeholder="Номер телефону"
+					data-phone-input
+					required
+				/>
+				<button class="form__block-btn" type="submit">Передзвоніть мені</button>
+			</form>
+			<div class="form__block-name">
+				<p>Віталій</p>
+				<p>Консультант</p>
+			</div>
+			<div class="form__block-contacts">
+				<a href="#"><img src="./img/phone.svg" alt="" />+38 (044) 752-93-62</a>
+				<a href="#"
+					><img src="./img/mail.svg" alt="" />vitaliy@astradent.clinic</a
+				>
+			</div>
+		</div>
+	</div>
+</section>
+
+				<section class="section subscription">
+	<div class="subscription__left">
+		<h4 class="subscription__left-title">Підписка на новини Astra Dent</h4>
+		<form class="subscription__left-form">
+			<input
+				class="subscription__left-input"
+				type="email"
+				placeholder="Email"
+				required
+			/>
+			<button class="subscription__left-btn" type="submit">Підписатися</button>
+		</form>
+	</div>
+	<div class="subscription__right">
+		<img
+			class="subscription__right-bg-element"
+			src="./img/telegram-vector.svg"
+			alt=""
+		/>
+		<a class="subscription__right-link" href="#">
+			<img src="./img/f-telegram.svg" alt="" />@astradentbot</a
+		>
+		<p class="subscription__right-text">
+			Переходь у бот та отримуй інформацію в кілька кліків
+		</p>
+	</div>
+</section>
+
+			</div>
+		</main>
+		<div class="container">
+			<footer class="bottom">
+	<img class="bottom__bg-element" src="./img/bg-element-footer.svg" alt="" />
+	<div class="footer">
+		<div class="footer__row">
+			<div class="footer__col first">
+				<div class="footer__contacts">
+					<a class="footer__logo" href="#"
+						><img src="./img/logo-footer.svg" alt=""
+					/></a>
+					<button class="footer__btn make-an-appointment">
+						Записатися на прийом
+					</button>
+					<a class="footer__tell" href="tel:380447529362"
+						><img src="./img/phone.svg" alt="" />+38 (044) 752-93-62</a
+					>
+					<div class="footer__socials">
+						<a class="footer__social" href="#"
+							><img src="./img/f-facebook.svg" alt=""
+						/></a>
+						<a class="footer__social" href="#"
+							><img src="./img/f-instagram.svg" alt=""
+						/></a>
+						<a class="footer__social" href="#"
+							><img src="./img/f-youtube.svg" alt=""
+						/></a>
+						<a class="footer__social" href="#"
+							><img src="./img/f-telegram.svg" alt=""
+						/></a>
+					</div>
+					<p class="footer__text">Ліцензія МОЗ України № 570616</p>
+					<p class="footer__text">
+						© 2018 - 2025.Всі права захищені Astra Dent
+					</p>
+					<ul class="footer__list">
+						<li class="footer__list-link">
+							<a href="#">Политика конфиденциальности</a>
+						</li>
+						<li class="footer__list-link">
+							<a href="#">Мапа сайту</a>
+						</li>
+					</ul>
+					<ul class="footer__medals">
+						<li class="footer__medal">
+							<img src="./img/medal.png" alt="" />
+						</li>
+						<li class="footer__medal">
+							<img src="./img/medal.png" alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__col second">
+				<h4 class="footer__col-title">Послуги</h4>
+				<ul class="footer__col-list first">
+					<li class="footer__col-item">
+						<a href="#"
+							>Відбілювання зубів<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Протезування зубів<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Імплантація зубів<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Хірургічна стоматологія<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">Вініри<img src="./img/chevron-right.svg" alt="" /></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Дитяча стоматологія<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Лікування зубів<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Виправлення прикусу<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Лікування ясен<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Лікування кореневих каналів<img
+								src="./img/chevron-right.svg"
+								alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Хірургічний стаціонар<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Зуботехнічна лабораторія Astra Dent<img
+								src="./img/chevron-right.svg"
+								alt=""
+						/></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#"
+							>Astra Clinic<img src="./img/chevron-right.svg" alt=""
+						/></a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__col third">
+				<h4 class="footer__col-title">Компанія</h4>
+				<ul class="footer__col-list second">
+					<li class="footer__col-item">
+						<a href="#">
+							Про компанію
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">Лікарі <img src="./img/chevron-right.svg" alt="" /></a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Клініки та контакти
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Ціни
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Відгуки
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Акціі
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Блог
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Фото до/після
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Ліцензіі
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+					<li class="footer__col-item">
+						<a href="#">
+							Гарантіі
+							<img src="./img/chevron-right.svg" alt="" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<p class="footer__site-create">Створення сайту - Nextweb</p>
+	</div>
+	<div class="footer-mobile">
+		<ul class="footer-mobile__list">
+			<li class="footer-mobile__item">
+				<a href="#">Послуги<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#">Клініки<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#">Лікарі<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#">Ціни<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#">Акціі<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#">Відгуки<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#">Блог<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#"
+					>Фото до/після<img src="./img/chevron-right.svg" alt=""
+				/></a>
+			</li>
+			<li class="footer-mobile__item">
+				<a href="#">Контакти<img src="./img/chevron-right.svg" alt="" /></a>
+			</li>
+		</ul>
+		<div class="footer-mobile__contacts">
+			<a class="footer-mobile__number" href="#">
+				<img src="./img/phone.svg" alt="" />
+				+38 (044) 752-93-62</a
+			>
+			<div class="footer-mobile__socials">
+				<a class="footer-mobile__social" href="#"
+					><img src="./img/f-facebook.svg" alt=""
+				/></a>
+				<a class="footer-mobile__social" href="#"
+					><img src="./img/f-instagram.svg" alt=""
+				/></a>
+				<a class="footer-mobile__social" href="#"
+					><img src="./img/f-youtube.svg" alt=""
+				/></a>
+				<a class="footer-mobile__social" href="#"
+					><img src="./img/f-telegram.svg" alt=""
+				/></a>
+			</div>
+		</div>
+
+		<a class="footer-mobile__polite" href="#">Политика конфиденциальности</a>
+		<ul class="footer-mobile__documents">
+			<li class="footer-mobile__document"><a href="#">Ліцензіі</a></li>
+			<li class="footer-mobile__document"><a href="#">Гарантіі</a></li>
+			<li class="footer-mobile__document"><a href="#">Мапа сайту</a></li>
+		</ul>
+		<p class="footer-mobile__text">Ліцензія МОЗ України № 570616</p>
+		<p class="footer-mobile__text">Створення сайту - Nextweb</p>
+		<p class="footer-mobile__text">
+			© 2018 - 2025.Всі права захищені Astra Dent
+		</p>
+	</div>
+</footer>
+ <div class="modal">
+	<div class="modal__content">
+		<button class="modal__close">
+			<img src="./img/close-modal.svg" alt="" />
+		</button>
+		<img class="modal__img hide" src="./img/modal-img.svg" alt="" />
+		<h2 class="modal__title title">Записатися на прийом</h2>
+		<h2 class="modal__title title-thank hide">
+			Спасибо, <br />
+			ваша заявка принята
+		</h2>
+		<form class="modal__form">
+			<input class="modal__input" type="text" placeholder="Ваше имя" required />
+			<input
+				class="modal__input"
+				type="email"
+				placeholder="Электронна пошта"
+				required
+			/>
+			<input
+				class="modal__input"
+				data-phone-input
+				type="text"
+				placeholder="Телефон"
+				required
+			/>
+			<div class="modal__dropdown">
+				<div class="dropdown__header">
+					<span class="dropdown__selected">Выберите услугу</span>
+					<img class="dropdown__chevron" src="./img/chevron.svg" alt="" />
+				</div>
+				<ul class="dropdown__list">
+					<li class="dropdown__option">Консультація стоматолога</li>
+					<li class="dropdown__option">Видалення зуба</li>
+					<li class="dropdown__option">Імплантація</li>
+					<li class="dropdown__option">Відбілювання</li>
+				</ul>
+			</div>
+
+			<button class="modal__btn" type="submit">Записатися на прийом</button>
+		</form>
+		<p class="modal__thank hide">
+			В ближайшие два часа с вами свяжется наш менеджер, чтобы обсудить удобное
+			время приёма
+		</p>
+		<img class="modal__bg-element" src="./img/bg-elemeny-modal.svg" alt="" />
+	</div>
+</div>
+
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

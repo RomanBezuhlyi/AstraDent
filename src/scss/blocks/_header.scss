@@ -703,3 +703,14 @@
 		@include center;
 	}
 }
+
+.header-mobile.second {
+	position: static;
+	padding-bottom: 2px;
+	width: 100%;
+	.header-mobile__content {
+		margin-top: 2px;
+		width: calc(100% + 24px);
+		margin-left: -12px;
+	}
+}

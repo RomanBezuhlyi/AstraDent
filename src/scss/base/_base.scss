@@ -81,3 +81,18 @@ button {
 	overflow: hidden;
 	height: 100vh;
 }
+
+.breadcrumbs {
+	@include flex(row, flex-start, center, 12px);
+	@media (max-width: 991px) {
+		gap: 4px;
+	}
+	&__item {
+		@include center;
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+}

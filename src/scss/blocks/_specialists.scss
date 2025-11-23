@@ -1,0 +1,234 @@
+@use '../abstracts' as *;
+
+.specialists {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__top {
+		@include flex(row, space-between, center, 10px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include flex(column, flex-start, flex-start, 16px);
+			margin-bottom: 16px;
+		}
+	}
+
+	&__title {
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+
+	&__sort {
+		@include flex(row, center, center, 8px);
+		padding: 6px 12px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 6px;
+		background: $white;
+		@media (max-width: 991px) {
+			width: 100%;
+			@include text-style(13px, 400, 16px);
+		}
+	}
+
+	&__list {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(4, 1fr);
+		@media (max-width: 991px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 16px;
+		}
+		@media (max-width: 768px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__card {
+		@include flex(column, flex-start, flex-start);
+		flex: 1 0 0;
+		align-self: stretch;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		overflow: hidden;
+	}
+
+	&__card-top {
+		position: relative;
+		@include box(100%, 373px);
+		@include flex(column, space-between, flex-end);
+		@media (max-width: 991px) {
+			height: 366px;
+		}
+		iframe {
+			@include box(100%);
+			object-fit: cover;
+		}
+	}
+
+	&__card-play {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		@include center;
+		padding: 4px;
+		border-radius: 200px;
+		background: $green;
+		z-index: 2;
+	}
+
+	&__card-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+		object-fit: cover;
+		z-index: 1;
+	}
+
+	&__card-info {
+		width: calc(100% - 16px);
+		position: absolute;
+		left: 8px;
+		bottom: 8px;
+		z-index: 2;
+	}
+
+	&__card-years {
+		width: fit-content;
+		@include flex(row, center, center, 6px);
+		padding: 4px 8px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(4px);
+		margin-bottom: 2px;
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__card-reviews {
+		width: fit-content;
+		@include flex(row, center, center, 6px);
+		padding: 4px 8px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(4px);
+		margin-bottom: 8px;
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__card-contacts {
+		width: 100%;
+		@include flex(row, space-between, center, 8px);
+		padding: 8px 12px;
+		align-self: stretch;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.4);
+		backdrop-filter: blur(8px);
+		@media (max-width: 991px) {
+			padding: 8px;
+		}
+	}
+
+	&__card-location {
+		@include flex(row, flex-start, center, 8px);
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__card-record {
+		@include center;
+		@include box(fit-content, 30px, 200px);
+		padding: 8px 16px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		border: 1px solid $green;
+		@include transition;
+		&:hover {
+			color: $green;
+			background: $white;
+		}
+		@media (max-width: 991px) {
+			@include text-style(12px, 500, 16px);
+			padding: 8px 12px;
+		}
+	}
+
+	&__card-bottom {
+		@include flex(column, flex-start, flex-start);
+		padding: 12px 20px 20px 20px;
+		align-self: stretch;
+		@media (max-width: 991px) {
+			padding: 8px 16px;
+		}
+	}
+
+	&__card-name {
+		@include text-style(20px, 500, 26px);
+		margin-bottom: 4px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 500, 20px);
+		}
+	}
+
+	&__card-profession {
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__card-projects {
+		margin-top: 12px;
+		@include flex(column, flex-start, flex-start, 4px);
+	}
+
+	&__card-projects--title {
+		@include text-style(16px, 500, 22px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 500, 16px);
+		}
+	}
+
+	&__card-projects--gallery {
+		width: 100%;
+		@include flex(row, flex-start, center, 4px);
+		a {
+			@include box(25%, 48px, 6px);
+			overflow: hidden;
+		}
+	}
+
+	&__btn-more {
+		@include center;
+		@include box(fit-content, 38px, 200px);
+		padding: 12px 36px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		background: $green;
+		border: 1px solid $green;
+		@include transition;
+		margin: auto;
+		margin-top: 20px;
+		&:hover {
+			color: $green;
+			background: $white;
+		}
+		@media (max-width: 991px) {
+			width: 100%;
+			@include text-style(12px, 400, 16px);
+		}
+	}
+}

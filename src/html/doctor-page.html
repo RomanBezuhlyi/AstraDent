@@ -17,48 +17,28 @@
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
 		<link rel="stylesheet" href="./css/main.css" />
-		<style>
-			.main {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-			}
-			.main__list {
-				margin: auto;
-				padding: 24px;
-				width: 300px;
-				height: auto;
-				background-color: bisque;
-				display: flex;
-				flex-direction: column;
-				gap: 12px;
-			}
-			.main__item {
-				font-size: 18px;
-			}
-			.main__item:hover {
-				color: brown;
-			}
-		</style>
 	</head>
 
 	<body>
-		<div class="main">
+		@@include('blocks/header-2.html')
+		<main>
 			<div class="container">
-				<ul class="main__list">
-					<li class="main__item">
-						<a href="home-page.html" target="_blank">Главная</a>
-					</li>
-					<li class="main__item">
-						<a href="doctors-page.html" target="_blank">Лікарі</a>
-					</li>
-					<li class="main__item">
-						<a href="doctor-page.html" target="_blank">Лікар</a>
-					</li>
-				</ul>
+				@@include('blocks/intro-2.html')
+				<div class="wrapper">
+					<div class="wrapper__left">
+						@@include('blocks/help.html')@@include('blocks/education.html')
+						@@include('blocks/diplomas.html')@@include('blocks/cases.html')
+						@@include('blocks/doctor-reviews.html')@@include('blocks/doctors-2.html')
+					</div>
+					<div class="wrapper__right">
+						@@include('blocks/consultation.html')
+					</div>
+				</div>
+				@@include('blocks/subscription.html')
 			</div>
+		</main>
+		<div class="container">
+			@@include('blocks/footer.html') @@include('blocks/modal.html')
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.education {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(28px, 500, 34px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			margin-bottom: 16px;
+		}
+	}
+
+	&__text {
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__sub-title {
+		margin-top: 20px;
+		@include text-style(20px, 500, 26px);
+		margin-bottom: 8px;
+		@media (max-width: 991px) {
+			margin-top: 16px;
+			@include text-style(16px, 500, 20px);
+		}
+	}
+
+	&__list {
+		@include flex(column, flex-start, flex-start, 8px);
+		li {
+			@include text-style(16px, 400, 22px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 400, 18px);
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+@use '../abstracts' as *;
+
+.diplomas {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(28px, 500, 34px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			margin-bottom: 16px;
+		}
+	}
+
+	&__item {
+		height: 320px;
+		border-radius: 5px;
+		overflow: hidden;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+	}
+
+	&__navigation {
+		margin-top: 24px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 16px;
+		}
+		.swiper-pagination-bullet {
+			@include box(24px, 3px, 200px);
+			opacity: 0.2;
+			background: $green;
+			@include transition;
+			margin: 0 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+}

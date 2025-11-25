@@ -1,0 +1,242 @@
+@use '../abstracts' as *;
+
+.doctor-reviews {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__top {
+		@include flex(row, space-between, center, 12px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			gap: 8px;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__title {
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+
+	&__top-right {
+		@include flex(row, flex-end, center, 12px);
+	}
+
+	&__right-btn {
+		@include center;
+		height: 32px;
+		padding: 8px 16px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__right-link {
+		@include flex(row, center, center, 4px);
+		padding: 4px 8px 4px 12px;
+		leading-trim: both;
+		text-edge: cap;
+		@include text-style(14px, 500, 18px);
+		letter-spacing: 0.28px;
+		text-transform: uppercase;
+		border-radius: 200px;
+		background: $white;
+	}
+
+	&__body {
+		@include flex(row, flex-start, flex-start, 20px);
+		@media (max-width: 991px) {
+			@include flex(column, center, center);
+			gap: 16px;
+		}
+	}
+
+	&__right {
+		width: 50%;
+		@include flex(column, flex-start, flex-start, 20px);
+		@media (max-width: 991px) {
+			width: 100%;
+			gap: 16px;
+		}
+	}
+
+	&__left {
+		width: 50%;
+		@include flex(column, flex-start, flex-start, 20px);
+		@media (max-width: 991px) {
+			width: 100%;
+			gap: 16px;
+		}
+	}
+
+	&__card {
+		@include flex(column, center, flex-start, 12px);
+		padding: 20px;
+		align-self: stretch;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		@media (max-width: 991px) {
+			padding: 16px;
+			gap: 8px;
+		}
+	}
+
+	&__card-top {
+		width: 100%;
+		@include flex(column, flex-start, flex-start);
+	}
+
+	&__card-head {
+		width: 100%;
+		@include flex(row, space-between, center);
+		margin-bottom: 4px;
+	}
+
+	&__card-head--left {
+		@include flex(row, flex-start, center, 8px);
+		h5 {
+			@include text-style(20px, 500, 26px);
+			@media (max-width: 991px) {
+				@include text-style(16px, 500, 20px);
+			}
+		}
+		p {
+			@include flex(row, flex-start, center, 4px);
+			@include text-style(14px, 500, 18px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 500, 16px);
+			}
+		}
+	}
+
+	&__card-head--right {
+		p {
+			color: #7f7f86;
+			@include text-style(14px, 400, 18px, right);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+	}
+
+	&__card-head--checkout {
+		color: $green;
+		@include flex(row, flex-start, center, 4px);
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 500, 16px);
+		}
+	}
+
+	&__card-head--gallery {
+		margin-top: 12px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 8px;
+		}
+		a {
+			@include box(60px, 70px);
+		}
+		a > img {
+			@include box(100%);
+			object-fit: cover;
+			border-radius: 6px;
+		}
+	}
+
+	&__card-head--gallery--play {
+		@include flex(column, flex-end, flex-start);
+		@include box(60px, 70px);
+		padding: 2px;
+		border-radius: 6px;
+		background: $green;
+	}
+
+	&__card-middle {
+		padding-bottom: 12px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	}
+
+	&__card-middle--text {
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__card-middle--more {
+		margin: auto;
+		margin-top: 4px;
+		@include flex(row, center, center, 4px);
+		color: #7f7f86;
+		padding: 8px 12px 8px 16px;
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(13px, 400, 16px);
+			padding: 4px 8px 4px 12px;
+		}
+	}
+
+	&__card-bottom {
+		width: 100%;
+	}
+
+	&__card-bottom--list {
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__card-bottom--item {
+		width: 100%;
+		@include flex(row, flex-start, center, 8px);
+		span {
+			width: 104px;
+			color: #7f7f86;
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(13px, 400, 16px);
+			}
+		}
+		p {
+			flex: 1;
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(13px, 400, 16px);
+			}
+		}
+	}
+
+	&__card-bottom--answer {
+		margin-top: 12px;
+		@include flex(row, flex-start, flex-start, 12px);
+		padding: 12px;
+		align-self: stretch;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.6);
+		@media (max-width: 991px) {
+			margin-top: 8px;
+			padding: 8px;
+			gap: 8px;
+		}
+		p {
+			color: $white;
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(13px, 400, 16px);
+			}
+		}
+		p:last-child {
+			font-weight: 500;
+		}
+	}
+}

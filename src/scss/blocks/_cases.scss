@@ -1,0 +1,191 @@
+@use '../abstracts' as *;
+
+.cases {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(28px, 500, 34px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			margin-bottom: 16px;
+		}
+	}
+
+	&__swiper {
+		width: 100%;
+	}
+
+	&__card {
+		border-radius: 8px;
+		overflow: hidden;
+	}
+
+	&__card-img {
+		position: relative;
+		@include flex(row, center, center);
+		@include box(100%, 200px);
+		.before {
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			@include center;
+			padding: 4px 8px;
+			@include text-style(14px, 400, 18px);
+			border-radius: 6px;
+			background: rgba(255, 255, 255, 0.8);
+			backdrop-filter: blur(4px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+		.separator {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			@include flex(row, center, center);
+			height: 100%;
+			z-index: 2;
+			&__before {
+				@include center;
+			}
+
+			&__line {
+				display: block;
+				width: 1px;
+				height: 100%;
+				background: $white;
+			}
+
+			&__after {
+				@include center;
+			}
+		}
+		.after {
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			@include center;
+			padding: 4px 8px;
+			@include text-style(14px, 400, 18px);
+			border-radius: 6px;
+			background: rgba(255, 255, 255, 0.8);
+			backdrop-filter: blur(4px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+	}
+
+	&__card-img--before {
+		width: 50%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__card-img--after {
+		width: 50%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__card-info {
+		padding: 20px;
+		background: rgba(255, 255, 255, 0.88);
+		@media (max-width: 991px) {
+			padding: 12px;
+		}
+	}
+
+	&__card-title {
+		@include text-style(20px, 500, 26px);
+		margin-bottom: 12px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 500, 20px);
+			margin-bottom: 8px;
+		}
+	}
+
+	&__card-list {
+		@include flex(column, flex-start, flex-start, 4px);
+		margin-bottom: 12px;
+		@media (max-width: 991px) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__card-item {
+		@include flex(row, flex-start, center, 8px);
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(13px, 400, 16px);
+		}
+		span {
+			width: 120px;
+			color: #7f7f86;
+			@media (max-width: 991px) {
+				width: 104px;
+			}
+		}
+	}
+
+	&__card-doctor {
+		@include flex(row, flex-start, center, 8px);
+		@include box(100%, 116px);
+		padding: 12px;
+		align-self: stretch;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.6);
+		@media (max-width: 991px) {
+			padding: 8px;
+			height: 86px;
+		}
+	}
+
+	&__card-doctor--img {
+		@include box(78px, 100%, 4px);
+		object-fit: cover;
+		@media (max-width: 991px) {
+			width: 60px;
+		}
+	}
+
+	&__card-doctor--info {
+		@include flex(column, flex-start, flex-start, 4px);
+		h5 {
+			color: $white;
+			@include text-style(20px, 500, 26px);
+			@media (max-width: 991px) {
+				@include text-style(16px, 500, 20px);
+			}
+		}
+		p {
+			color: $white;
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+	}
+
+	&__pagination {
+		margin-top: 24px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 16px;
+		}
+		.swiper-pagination-bullet {
+			@include box(24px, 3px, 200px);
+			opacity: 0.2;
+			background: $green;
+			@include transition;
+			margin: 0 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+}

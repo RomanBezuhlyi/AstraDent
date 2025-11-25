@@ -84,6 +84,8 @@ button {
 
 .breadcrumbs {
 	@include flex(row, flex-start, center, 12px);
+	position: relative;
+	z-index: 4;
 	@media (max-width: 991px) {
 		gap: 4px;
 	}
@@ -93,6 +95,24 @@ button {
 		@include text-style(14px, 400, 18px);
 		@media (max-width: 991px) {
 			@include text-style(12px, 400, 16px);
+		}
+	}
+}
+
+.wrapper {
+	@include flex(row, space-between, flex-start, 32px);
+	&__left {
+		width: calc(100% - 432px);
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+	&__right {
+		align-self: stretch;
+		position: relative;
+		width: 400px;
+		@media (max-width: 1024px) {
+			display: none;
 		}
 	}
 }

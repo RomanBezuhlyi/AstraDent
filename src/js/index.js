@@ -1,11 +1,18 @@
-import { initHeaderMobileDropdowns } from './modules/ initHeaderMobileDropdowns'
 import { initAppointmentModal } from './modules/initAppointmentModal'
+import { initCasesSwiper } from './modules/initCasesSwiper'
 import { initCatalogList } from './modules/initCatalogList'
 import { initClientsSwiper } from './modules/initClientsSwiper'
 import { initClientsVideo } from './modules/initClientsVideo'
-import { initDoctorsSwiper } from './modules/initDoctorsSwiper'
+import { initDiplomasSwiper } from './modules/initDiplomasSwiper'
+import { initDoctorSwiper } from './modules/initDoctorSwiper'
+import { initDoctorVideoPlayer } from './modules/initDoctorVideoPlayer'
+import {
+	initDoctorsSwiper,
+	initDoctorsSwiper2,
+} from './modules/initDoctorsSwiper'
 import { initDropdowns } from './modules/initDropdowns'
 import { initFaq } from './modules/initFaq'
+import { initHeaderMobileDropdowns } from './modules/initHeaderMobileDropdowns'
 import { initHeaderMobileMenu } from './modules/initHeaderMobileMenu'
 import { initHeroSwiper } from './modules/initHeroSwiper'
 import { initInsuranceSwiper } from './modules/initInsuranceSwiper'
@@ -38,4 +45,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	initClientsVideo()
 	initSpecialists()
 	initFaq()
+	initHeaderMobileDropdowns()
+	initDoctorSwiper()
+	initDoctorVideoPlayer()
+	initDiplomasSwiper()
+	initCasesSwiper()
+	initDoctorsSwiper2()
 })

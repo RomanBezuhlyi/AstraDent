@@ -1,0 +1,77 @@
+@use '../abstracts' as *;
+
+.consultation {
+	position: sticky;
+	right: 0;
+	top: 0;
+	@include flex(column, center, center, 20px);
+	&__top {
+		@include flex(column, flex-start, flex-start, 16px);
+		padding: 24px 12px;
+		gap: 16px;
+		align-self: stretch;
+		border-radius: 16px;
+		background: rgba(67, 67, 74, 0.8);
+	}
+
+	&__top-title {
+		color: $white;
+		@include text-style(20px 500, 26px, center);
+	}
+
+	&__top-form {
+		width: 100%;
+		@include flex(column, center, center, 16px);
+	}
+
+	&__top-input {
+		@include flex(row, flex-start, center, 10px);
+		height: 40px;
+		padding: 8px 16px;
+		align-self: stretch;
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		border-radius: 8px;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		background: rgba(255, 255, 255, 0.2);
+		@include transition;
+		&::placeholder {
+			color: $white;
+			opacity: 1;
+		}
+		&:focus {
+			border-color: $white;
+		}
+	}
+
+	&__top-btn {
+		@include center;
+		height: 40px;
+		padding: 12px 36px;
+		align-self: stretch;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+		}
+	}
+
+	&__bottom {
+		padding: 20px;
+		align-self: stretch;
+		border-radius: 16px;
+		background: rgba(255, 255, 255, 0.88);
+	}
+
+	&__bottom-list {
+		@include flex(column, flex-start, flex-start, 16px);
+	}
+
+	&__bottom-item {
+		@include flex(row, flex-start, center, 12px);
+		@include text-style(16px, 500, 22px);
+	}
+}

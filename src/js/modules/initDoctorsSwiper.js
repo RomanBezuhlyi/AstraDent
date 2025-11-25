@@ -27,3 +27,28 @@ export function initDoctorsSwiper() {
 		},
 	})
 }
+export function initDoctorsSwiper2() {
+	new Swiper('.doctors__swiper-2', {
+		spaceBetween: 4,
+		slidesPerView: 2.2,
+		loop: true,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.doctors__swiper-pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			767: {
+				spaceBetween: 8,
+				slidesPerView: 3,
+			},
+			991: {
+				spaceBetween: 20,
+				slidesPerView: 4,
+			},
+		},
+	})
+}

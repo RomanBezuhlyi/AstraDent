@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/img/favicon-16x16.png" />
+		<link rel="shortcut icon" type="image/png" href="/img/favicon-16x16.png" />
+		<title>AstraDent</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+	</head>
+
+	<body>
+		@@include('blocks/header-2.html')
+		<main>
+			<div class="container">
+				@@include('blocks/intro-3.html')
+				<div class="wrapper">
+					<div class="wrapper__left">
+						@@include('blocks/services-2.html')
+						@@include('blocks/price.html')@@include('blocks/shares.html')
+						@@include('blocks/doctors-3.html')@@include('blocks/cases-2.html')
+						@@include('blocks/doctor-reviews-2.html')@@include('blocks/our-dentistry.html')@@include('blocks/info-3.html')
+						@@include('blocks/faq.html')@@include('blocks/author.html')
+						@@include('blocks/advantages.html')@@include('blocks/form-2.html')
+					</div>
+					<div class="wrapper__right">
+						@@include('blocks/consultation.html')
+					</div>
+				</div>
+				@@include('blocks/subscription.html')
+			</div>
+		</main>
+		<div class="container">
+			@@include('blocks/footer.html') @@include('blocks/modal.html')
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/imask"></script>
+		<script src="./js/index.bundle.js"></script>
+	</body>
+</html>

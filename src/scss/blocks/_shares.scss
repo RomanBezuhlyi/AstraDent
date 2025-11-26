@@ -1,0 +1,169 @@
+@use '../abstracts' as *;
+
+.shares {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__top {
+		@include flex(row, space-between, center);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__top-title {
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+
+	&__top-link {
+		@include flex(row, center, center, 4px);
+		padding: 4px 8px 4px 12px;
+		letter-spacing: 0.28px;
+		text-transform: uppercase;
+		@include text-style(14px, 500, 18px);
+		border-radius: 200px;
+		background: $white;
+		@media (max-width: 991px) {
+			@include text-style(13px, 500, 16px);
+		}
+	}
+
+	&__swiper {
+		width: 100%;
+		@media (max-width: 991px) {
+			width: calc(100% + 12px);
+		}
+	}
+
+	&__card {
+		height: 486px;
+		border-radius: 16px;
+		overflow: hidden;
+		@media (max-width: 991px) {
+			height: 240px;
+			border-radius: 8px;
+		}
+	}
+
+	&__card-img {
+		position: relative;
+		@include box(100%);
+		object-fit: cover;
+	}
+
+	&__card-link {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		@include box(32px);
+		@include center;
+		padding: 4px;
+		border-radius: 200px;
+		background: $green;
+		@media (max-width: 991px) {
+			top: 4px;
+			right: 4px;
+		}
+	}
+
+	&__card-info {
+		position: absolute;
+		left: 8px;
+		bottom: 8px;
+		width: calc(100% - 16px);
+		@include flex(column, flex-start, flex-start, 8px);
+		padding: 12px;
+		align-self: stretch;
+		border-radius: 12px;
+		background: rgba(67, 67, 74, 0.4);
+		backdrop-filter: blur(8px);
+		@media (max-width: 991px) {
+			width: calc(100% - 8px);
+			left: 4px;
+			bottom: 4px;
+			padding: 8px;
+		}
+	}
+
+	&__card-title {
+		color: $white;
+		@include text-style(20px, 500, 26px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	&__card-more {
+		@include center;
+		height: 40px;
+		padding: 12px 24px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $text;
+		@include transition;
+		&:hover {
+			background: $green;
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__prev {
+		position: absolute;
+		left: 8px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		@include center;
+		@include box(36px);
+		padding: 3px;
+		border-radius: 200px;
+		background: rgba(255, 255, 255, 0.32);
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__next {
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		@include center;
+		@include box(36px);
+		padding: 3px;
+		border-radius: 200px;
+		background: rgba(255, 255, 255, 0.32);
+		box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__pagination {
+		margin-top: 24px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 16px;
+		}
+		.swiper-pagination-bullet {
+			@include box(24px, 3px, 200px);
+			opacity: 0.2;
+			background: $green;
+			@include transition;
+			margin: 0 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+}

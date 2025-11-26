@@ -40,6 +40,24 @@
 		}
 	}
 
+	&__btn {
+		@include center;
+		height: 40px;
+		padding: 12px 36px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+		}
+		@media (max-width: 991px) {
+			height: 36px;
+			padding: 8px 16px;
+		}
+	}
+
 	&__anchor {
 		@include center;
 		padding: 8px 12px;
@@ -62,6 +80,14 @@
 		@include flex(column, flex-start, flex-start, 8px);
 		@media (max-width: 991px) {
 			gap: 4px;
+		}
+	}
+
+	&__text {
+		color: $white;
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
 		}
 	}
 

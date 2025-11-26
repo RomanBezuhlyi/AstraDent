@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+.service-switcher {
+	padding: 8px 0;
+	@media (max-width: 991px) {
+		width: calc(100% + 8px);
+		margin-left: -4px;
+	}
+
+	&__list {
+		width: fit-content;
+		@include flex(row, flex-start, center, 1px);
+		padding: 2px;
+		border-radius: 200px;
+		background: rgba(255, 255, 255, 0.72);
+		@media (max-width: 991px) {
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
+
+	&__item {
+		@include center;
+	}
+
+	&__item > a {
+		@include center;
+		padding: 8px 16px;
+		color: #7f7f86;
+		@include text-style(14px, 400, 18px, center);
+		white-space: nowrap;
+		border-radius: 200px;
+		border: 1px solid transparent;
+		background: transparent;
+		@include transition;
+		&.active {
+			color: $text;
+			font-weight: 500;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			background: $white;
+		}
+		&:hover {
+			color: $text;
+			font-weight: 500;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			background: $white;
+		}
+		@media (max-width: 991px) {
+			padding: 8px 10px;
+			@include text-style(13px, 400, 16px, center);
+		}
+	}
+}

@@ -6,11 +6,29 @@
 		margin-bottom: 2px;
 	}
 	h2 {
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+	h3 {
 		@include text-style(20px, 500, 26px);
+		@media (max-width: 991px) {
+			@include text-style(16px, 500, 20px);
+		}
+	}
+	h4 {
+		@include text-style(20px, 500, 26px);
+		@media (max-width: 991px) {
+			@include text-style(16px, 500, 20px);
+		}
 	}
 	p,
 	li {
 		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
 	}
 	ol {
 		list-style-type: decimal;
@@ -19,5 +37,93 @@
 	ul {
 		list-style-type: disc;
 		margin-left: 20px;
+	}
+
+	.info-image {
+		@include box(100%, 600px, 8px);
+		object-fit: cover;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+	}
+
+	.ui-table {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0;
+		border-radius: 8px;
+		overflow: hidden;
+		border-top: 1px solid #c5c5cc;
+		border-left: 1px solid #c5c5cc;
+		border-right: 1px solid #c5c5cc;
+	}
+
+	.ui-table thead th {
+		text-align: left;
+		padding: 8px 12px;
+		border-bottom: 1px solid var(--grey-50, #7f7f86);
+		background: #d5dcde;
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		@include text-style(16px, 500, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	.ui-table td {
+		padding: 8px 12px;
+		border-bottom: 1px solid #c5c5cc;
+		vertical-align: middle;
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+}
+
+.info-second {
+	@include flex(column, flex-start, flex-start, 20px);
+	@media (max-width: 991px) {
+		gap: 16px;
+	}
+}
+.info-video {
+	position: relative;
+	@include box(100%, 600px, 8px);
+	overflow: hidden;
+	z-index: 1;
+	@media (max-width: 991px) {
+		height: 200px;
+	}
+	&__iframe {
+		@include box(100%);
+	}
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+		object-fit: cover;
+		z-index: 2;
+	}
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include box(100%);
+		@include center;
+		z-index: 3;
+	}
+
+	&__play {
+		@include center;
+		padding: 7.5px;
+		border-radius: 375px;
+		background: $green;
+		@media (max-width: 991px) {
+			padding: 4px;
+		}
 	}
 }

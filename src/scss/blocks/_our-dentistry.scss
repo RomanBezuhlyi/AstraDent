@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+
+.our-dentistry {
+	.locations__body {
+		@include flex(column, center, center, 20px);
+	}
+	.locations__left {
+		width: 100%;
+	}
+	.locations__item {
+		width: 100%;
+		justify-content: space-between;
+	}
+	.locations__item.load-more {
+		@include center;
+		.btn-load-more {
+			@include flex(column, center, center, 4px);
+			@include text-style(20px, 500, 26px, center);
+		}
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	.locations__item-info {
+		width: 100%;
+	}
+	.locations__item-bottom {
+		width: 100%;
+	}
+	.locations__item-btn {
+		width: 100%;
+	}
+	.locations__right {
+		width: 100%;
+	}
+	.locations__map {
+		height: 400px;
+		@media (max-width: 991px) {
+			height: 280px;
+		}
+	}
+}

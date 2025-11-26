@@ -1,0 +1,72 @@
+@use '../abstracts' as *;
+
+.author {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__list {
+		@include flex(row, center, flex-start, 20px);
+		@media (max-width: 991px) {
+			flex-direction: column;
+			padding: 16px;
+			border-radius: 8px;
+			background: rgba(255, 255, 255, 0.88);
+		}
+	}
+
+	&__card {
+		@include flex(row, flex-start, center, 12px);
+		padding: 20px;
+		flex: 1 0 0;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		@media (max-width: 991px) {
+			padding: 0;
+			border: 0;
+			background: 0;
+		}
+	}
+
+	&__card-img {
+		@include box(92px, 100%);
+		object-fit: cover;
+		padding: 2px;
+		align-self: stretch;
+		border-radius: 6px;
+		@media (max-width: 991px) {
+			@include box(60px, 70px);
+		}
+	}
+
+	&__card-info {
+		@include flex(column, flex-start, flex-start, 4px);
+	}
+
+	&__card-info--item {
+		@include flex(column, flex-start, flex-start);
+		.label {
+			color: #7f7f86;
+			@include text-style(12px, 400, 14px);
+			@media (max-width: 991px) {
+				@include text-style(11px, 400, 13px);
+			}
+		}
+		.name {
+			@include text-style(16px, 400, 22px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 400, 18px);
+			}
+		}
+		.value {
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+	}
+
+	&__card-info--item.row {
+		@include flex(row, flex-start, center, 20px);
+	}
+}

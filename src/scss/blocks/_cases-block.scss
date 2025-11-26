@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+.cases-block {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__list {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: 991px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 16px;
+		}
+		@media (max-width: 767px) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	.cases__card-img {
+		height: 280px;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+	}
+
+	&__btn {
+		margin: auto;
+		margin-top: 20px;
+		@include center;
+		@include box(fit-content, 40px);
+		padding: 12px 36px;
+		@include text-style(14px, 500, 18px, center);
+		align-self: stretch;
+		color: $white;
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+		}
+		@media (max-width: 991px) {
+			margin-top: 16px;
+			@include box(100%, 36px);
+			padding: 8px 16px;
+		}
+	}
+}

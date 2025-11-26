@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.case-intro {
+	@include flex(column, space-between, flex-start);
+	@include box(100%, 218px);
+	padding: 44px;
+	flex: 1 0 0;
+	border-radius: 16px;
+	background: rgba(0, 0, 0, 0.32);
+	margin: 24px 0;
+	@media (max-width: 991px) {
+		margin: 2px 0;
+		margin-left: -12px;
+		width: calc(100% + 24px);
+		height: 118px;
+		padding: 16px 12px;
+	}
+
+	&__top {
+		@include flex(column, flex-start, flex-start, 12px);
+		@media (max-width: 991px) {
+			gap: 8px;
+		}
+	}
+
+	&__title {
+		color: $white;
+		@include text-style(36px, 500, 42px);
+		@media (max-width: 991px) {
+			@include text-style(24px, 500, 30px);
+		}
+	}
+
+	&__text {
+		color: $white;
+		max-width: 600px;
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__anchor {
+		@include center;
+		padding: 8px 12px;
+		@include text-style(16px, 500, 22px);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(4px);
+		@include transition;
+		&:hover {
+			color: $white;
+			background: $text;
+		}
+		@media (max-width: 991px) {
+			padding: 4px 8px;
+			@include text-style(14px, 500, 18px);
+		}
+	}
+}

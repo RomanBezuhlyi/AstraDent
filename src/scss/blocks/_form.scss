@@ -1,5 +1,18 @@
 @use '../abstracts' as *;
-
+.form-second {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+		border-radius: 16px;
+		overflow: hidden;
+		padding: 24px 12px 0 12px;
+		width: calc(100% + 24px);
+		margin-left: -12px;
+	}
+	.form__block-right {
+		padding-bottom: 16px;
+	}
+}
 .form {
 	background: $bg;
 	margin-bottom: 4px;

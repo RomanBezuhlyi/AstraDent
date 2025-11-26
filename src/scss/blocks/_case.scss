@@ -1,0 +1,285 @@
+@use '../abstracts' as *;
+
+.ba-container {
+	position: relative;
+	max-width: 100%;
+	@include box(100%, 600px);
+	aspect-ratio: 16 / 9;
+	overflow: hidden;
+	border-radius: 12px;
+	@media (max-width: 991px) {
+		height: 200px;
+		border-radius: 8px;
+	}
+}
+
+.ba-img {
+	position: absolute;
+	inset: 0;
+
+	> img {
+		position: absolute;
+		inset: 0;
+		@include box(100%);
+		object-fit: cover;
+	}
+}
+
+.ba-before {
+	inset: 0;
+}
+
+.ba-after {
+	inset: 0;
+	clip-path: inset(0 50% 0 0);
+}
+
+.ba-slider {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	@include flex(row, center, center, 2px);
+	transform: translateX(-50%);
+}
+
+.ba-line {
+	@include box(1px, 100%);
+	background: #fff;
+}
+
+.ba-arrow {
+	@include center;
+	@include box(20px);
+}
+
+.case {
+	margin-bottom: 4px;
+	@include flex(column, flex-start, flex-start, 20px);
+	@media (max-width: 991px) {
+		gap: 16px;
+		margin-bottom: 2px;
+	}
+	&__text {
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__gallery {
+		width: 100%;
+	}
+
+	&__pagination {
+		margin-top: 24px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 16px;
+		}
+		.swiper-pagination-bullet {
+			@include box(24px, 3px, 200px);
+			opacity: 0.2;
+			background: $green;
+			@include transition;
+			margin: 0 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+
+	&__video {
+		position: relative;
+		@include box(100%, 600px, 8px);
+		overflow: hidden;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+	}
+
+	&__video-iframe {
+		@include box(100%);
+	}
+
+	&__video-img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include box(100%);
+		object-fit: cover;
+	}
+
+	&__video-overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include box(100%);
+		@include center;
+	}
+
+	&__video-btn {
+		@include center;
+		padding: 7.5px;
+		border-radius: 375px;
+		background: $green;
+		@media (max-width: 991px) {
+			padding: 4px;
+		}
+	}
+
+	&__share {
+		width: 100%;
+		padding: 8px 12px;
+		border-radius: 8px;
+		background: $white;
+	}
+
+	&__share-list {
+		@include flex(row, center, center, 8px);
+		align-self: stretch;
+	}
+
+	&__share-item {
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__specialists {
+		width: 100%;
+		padding: 12px;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.6);
+		@media (max-width: 991px) {
+			padding: 8px;
+			margin: -12px 0;
+		}
+	}
+
+	&__specialists-title {
+		color: $white;
+		@include text-style(16px, 500, 22px);
+		margin-bottom: 8px;
+		@media (max-width: 991px) {
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	&__specialists-list {
+		@include flex(row, space-between, center, 20px);
+		@media (max-width: 991px) {
+			@include flex(column, flex-start, flex-start, 8px);
+			gap: 8px;
+		}
+	}
+
+	&__specialists-item {
+		@include flex(row, flex-start, center, 20px);
+		@media (max-width: 991px) {
+			gap: 8px;
+		}
+	}
+
+	&__specialists-item--img {
+		@include box(60px, 70px);
+		object-fit: cover;
+		border-radius: 4px;
+	}
+
+	&__specialists-item--info {
+		@include flex(column, flex-start, flex-start, 4px);
+		h3 {
+			color: $white;
+			@include text-style(20px, 500, 26px);
+			@media (max-width: 991px) {
+				@include text-style(16px, 500, 20px);
+			}
+		}
+		p {
+			color: $white;
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+	}
+
+	&__bottom {
+		width: 100%;
+		@include flex(row, center, flex-start, 20px);
+	}
+
+	&__bottom-block {
+		width: 50%;
+		height: 150px;
+		@include box(50%, 150px);
+		@include flex(column, flex-start, flex-start, 8px);
+		padding: 12px;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.6);
+		@media (max-width: 991px) {
+			width: 100%;
+			@include box(100%, auto);
+			padding: 8px;
+		}
+		&.desktop {
+			@include flex(column, flex-start, flex-start, 8px);
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+		&.mobile {
+			display: none;
+			@media (max-width: 991px) {
+				@include flex(column, flex-start, flex-start, 8px);
+			}
+		}
+	}
+
+	&__bottom-block--list {
+		@include flex(column, flex-start, flex-start, 8px);
+	}
+
+	&__bottom-block--item {
+		@include flex(row, flex-start, flex-start, 8px);
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(13px, 400, 16px);
+		}
+		a {
+			text-decoration-line: underline;
+			text-decoration-style: solid;
+			text-decoration-skip-ink: auto;
+			text-decoration-color: rgba(255, 255, 255, 0.4);
+			text-decoration-thickness: auto;
+			text-underline-offset: auto;
+			text-underline-position: from-font;
+		}
+	}
+
+	&__bottom-block--link {
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		text-decoration-line: underline;
+		text-decoration-style: solid;
+		text-decoration-skip-ink: auto;
+		text-decoration-color: rgba(255, 255, 255, 0.4);
+		text-decoration-thickness: auto;
+		text-underline-offset: auto;
+		text-underline-position: from-font;
+		@media (max-width: 991px) {
+			@include text-style(13px, 400, 16px);
+		}
+	}
+
+	&__bottom-block--title {
+		color: $white;
+		@include text-style(16px, 500, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 500, 18px);
+		}
+	}
+}

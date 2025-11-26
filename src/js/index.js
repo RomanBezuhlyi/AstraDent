@@ -1,4 +1,7 @@
 import { initAppointmentModal } from './modules/initAppointmentModal'
+import { initBeforeAfter } from './modules/initBeforeAfter'
+import { initCaseSwiper } from './modules/initCaseSwiper'
+import { initCaseVideo } from './modules/initCaseVideo'
 import { initCasesSwiper } from './modules/initCasesSwiper'
 import { initCatalogList } from './modules/initCatalogList'
 import { initClientsSwiper } from './modules/initClientsSwiper'
@@ -51,4 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	initDiplomasSwiper()
 	initCasesSwiper()
 	initDoctorsSwiper2()
+	initBeforeAfter()
+	initCaseSwiper()
+	initCaseVideo()
 })

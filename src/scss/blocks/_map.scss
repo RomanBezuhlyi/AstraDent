@@ -1,0 +1,153 @@
+@use '../abstracts' as *;
+
+.map {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(28px, 500, 34px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			margin-bottom: 16px;
+		}
+	}
+
+	&__content {
+		@include flex(row, flex-start, flex-start, 32px);
+		@media (max-width: 991px) {
+			flex-direction: column;
+			gap: 16px;
+		}
+	}
+
+	&__iframe {
+		@include box(50%, 380px, 8px);
+		@media (max-width: 991px) {
+			width: 100%;
+			height: 200px;
+		}
+	}
+
+	&__contacts {
+		width: 50%;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+	}
+
+	&__contacts-switcher {
+		padding: 2px;
+		border-radius: 200px;
+		background: rgba(255, 255, 255, 0.72);
+		margin-bottom: 20px;
+		&.desktop {
+			@include flex(row, center, center, 1px);
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+		&.mobile {
+			display: none;
+			@media (max-width: 991px) {
+				display: flex;
+			}
+		}
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__contacts-switch {
+		@include center;
+		padding: 8px;
+		flex: 1 0 0;
+		color: #7f7f86;
+		@include text-style(14px, 400, 18px, center);
+		white-space: nowrap;
+		border-radius: 200px;
+		border: 1px solid transparent;
+		background: transparent;
+		@include transition;
+		&:hover {
+			color: $text;
+			font-weight: 500;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			background: $white;
+		}
+		&.active {
+			color: $text;
+			font-weight: 500;
+			border: 1px solid rgba(0, 0, 0, 0.08);
+			background: $white;
+		}
+		@media (max-width: 991px) {
+			@include text-style(13px, 400, 16px, center);
+		}
+	}
+
+	&__contacts-text {
+		@include text-style(16px, 400, 22px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+			margin-bottom: 8px;
+		}
+	}
+
+	&__contacts-btn {
+		@include center;
+		@include box(100%, 40px);
+		padding: 12px 36px;
+		align-self: stretch;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		margin-bottom: 20px;
+		&:hover {
+			background: $text;
+		}
+
+		&.desktop {
+			@include flex(row, center, center, 1px);
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+		&.mobile {
+			display: none;
+			@media (max-width: 991px) {
+				display: flex;
+			}
+		}
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+			padding: 8px 16px;
+			height: 36px;
+			margin-bottom: 8px;
+		}
+	}
+
+	&__contacts-bottom {
+		@include flex(row, center, center, 4px);
+	}
+
+	&__contacts-bottom--item {
+		@include flex(row, center, center, 8px);
+		padding: 6px 12px;
+		flex: 1 0 0;
+		@include text-style(14px, 400, 18px);
+		border-radius: 4px;
+		background: $white;
+		@include transition;
+		&:hover {
+			color: $green;
+		}
+		@media (max-width: 991px) {
+			@include text-style(13px, 400, 16px);
+		}
+	}
+}

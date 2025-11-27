@@ -1,3 +1,5 @@
+import { initAboutUsSwiper } from './modules/initAboutUsSwiper'
+import { initAboutUsVideo } from './modules/initAboutUsVideo'
 import { initAppointmentModal } from './modules/initAppointmentModal'
 import { initBeforeAfter } from './modules/initBeforeAfter'
 import { initCaseSwiper } from './modules/initCaseSwiper'
@@ -69,4 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initSharesSwiper()
 	initClientsSwiper2()
 	initInfoVideo()
+	initAboutUsSwiper()
+	initAboutUsVideo()
 })

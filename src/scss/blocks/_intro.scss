@@ -42,7 +42,7 @@
 
 	&__btn {
 		@include center;
-		height: 40px;
+		@include box(fit-content, 40px);
 		padding: 12px 36px;
 		color: $white;
 		@include text-style(14px, 500, 18px, center);
@@ -56,6 +56,11 @@
 			height: 36px;
 			padding: 8px 16px;
 		}
+	}
+
+	&__row {
+		width: fit-content;
+		@include flex(row, flex-start, center, 4px);
 	}
 
 	&__anchor {
@@ -76,10 +81,135 @@
 		}
 	}
 
+	&__middle {
+		@include flex(column, flex-start, flex-start, 8px);
+		a {
+			@include flex(row, flex-start, center, 8px);
+			color: $white;
+			@include text-style(16px, 400, 22px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 400, 18px);
+			}
+		}
+	}
+
 	&__bottom {
 		@include flex(column, flex-start, flex-start, 8px);
 		@media (max-width: 991px) {
 			gap: 4px;
+		}
+	}
+
+	&__bottom-btns {
+		@include flex(row, flex-start, center, 8px);
+		flex-wrap: wrap;
+		max-width: 720px;
+		width: 100%;
+		margin-bottom: 40px;
+		@media (max-width: 991px) {
+			max-width: 100%;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__bottom-btns--phone {
+		@include flex(row, center, center, 12px);
+		padding: 12px 20px;
+		flex: 1 0 0;
+		color: $white;
+		@include text-style(16px, 500, 22px);
+		white-space: nowrap;
+		border-radius: 200px;
+		background: rgba(67, 67, 74, 0.8);
+		backdrop-filter: blur(8px);
+		@include transition;
+		&:hover {
+			color: $green;
+		}
+		@media (max-width: 991px) {
+			justify-content: flex-start;
+			padding: 8px 20px;
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	&__bottom-btns--record {
+		@include center;
+		@include box(fit-content, 48px);
+		padding: 8px 16px;
+		flex: 1 0 0;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		white-space: nowrap;
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+		}
+		@media (max-width: 991px) {
+			height: 36px;
+		}
+	}
+
+	&__bottom-btns--location {
+		@include center;
+		@include box(fit-content, 48px);
+		padding: 8px 16px;
+		flex: 1 0 0;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $text;
+		@include transition;
+		&:hover {
+			background: $green;
+		}
+		@media (max-width: 991px) {
+			height: 36px;
+		}
+	}
+
+	&__bottom-reviews {
+		@include flex(row, flex-start, flex-start, 4px);
+	}
+
+	&__bottom-review {
+		width: 237px;
+		@include flex(column, center, center, 8px);
+		padding: 8px 4px 4px 4px;
+		flex: 1 0 0;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		@media (max-width: 991px) {
+			width: 119px;
+		}
+	}
+
+	&__bottom-review--logo {
+		height: 32px;
+		border-radius: 4px;
+		object-fit: cover;
+	}
+
+	&__bottom-review--list {
+		@include flex(row, center, flex-start, 2px);
+		width: 100%;
+	}
+
+	&__bottom-review--item {
+		width: 50%;
+		@include flex(row, center, center, 6px);
+		padding: 4px;
+		flex: 1 0 0;
+		@include text-style(14px, 500, 18px);
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.8);
+		img {
+			@include box(16px);
+		}
+		@media (max-width: 991px) {
+			@include text-style(12px, 500, 16px);
 		}
 	}
 
@@ -150,5 +280,11 @@
 			@include box(181px, 40px);
 			@include text-style(13px, 400, 16px);
 		}
+	}
+}
+.about-us-intro {
+	height: 644px;
+	@media (max-width: 991px) {
+		height: 542px;
 	}
 }

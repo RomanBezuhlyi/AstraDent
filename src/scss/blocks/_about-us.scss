@@ -1,0 +1,202 @@
+@use '../abstracts' as *;
+
+.about-us__switcher {
+	.service-switcher__item > a {
+		@media (max-width: 991px) {
+			padding: 8px;
+		}
+	}
+}
+.about-us {
+	@include flex(column, flex-start, flex-start, 20px);
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		gap: 16px;
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(28px, 500, 34px);
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+		}
+	}
+
+	&__video {
+		position: relative;
+		@include box(100%, 600px, 8px);
+		overflow: hidden;
+		@media (max-width: 991px) {
+			height: 200px;
+		}
+	}
+
+	&__video--iframe {
+		@include box(100%);
+	}
+
+	&__video--img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include box(100%);
+		object-fit: cover;
+	}
+
+	&__video--overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include box(100%);
+		@include center;
+	}
+
+	&__video--play {
+		@include center;
+		padding: 7.5px;
+		border-radius: 375px;
+		background: $green;
+		@media (max-width: 991px) {
+			padding: 4px;
+		}
+	}
+
+	p {
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	p:has(> strong) {
+		margin-bottom: -12px;
+	}
+
+	ul {
+		list-style-type: disc;
+		margin-left: 20px;
+	}
+
+	ul > li {
+		@include text-style(16px, 400, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__swiper {
+		width: 100%;
+	}
+
+	&__navigation {
+		margin-top: 24px;
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			margin-top: 16px;
+		}
+		.swiper-pagination-bullet {
+			@include box(24px, 3px, 200px);
+			opacity: 0.2;
+			background: $green;
+			@include transition;
+			margin: 0 !important;
+		}
+		.swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+	}
+
+	.main-doctor {
+		@include flex(column, center, flex-start, 8px);
+		padding: 12px;
+		flex: 1 0 0;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.6);
+		@media (max-width: 991px) {
+			padding: 8px;
+			width: 100%;
+		}
+		&__title {
+			color: $white;
+			@include text-style(16px, 400, 22px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 400, 18px);
+			}
+		}
+
+		&__body {
+			@include flex(row, flex-start, center, 8px);
+		}
+
+		&__img {
+			@include box(78px, 92px, 4px);
+			object-fit: cover;
+			@media (max-width: 991px) {
+				@include box(60px, 70px, 4px);
+			}
+		}
+
+		&__info {
+			@include flex(column, flex-start, flex-start, 4px);
+		}
+
+		&__info-title {
+			color: $white;
+			@include text-style(20px, 500, 26px);
+			@media (max-width: 991px) {
+				@include text-style(16px, 500, 20px);
+			}
+		}
+
+		&__info-text {
+			color: $white;
+			@include text-style(14px, 400, 18px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+
+		&__info-mark {
+			padding: 4px 8px;
+			@include flex(row, center, center, 6px);
+			@include text-style(14px, 400, 18px);
+			border-radius: 6px;
+			background: rgba(255, 255, 255, 0.8);
+			backdrop-filter: blur(4px);
+			@media (max-width: 991px) {
+				@include text-style(12px, 400, 16px);
+			}
+		}
+	}
+
+	.license {
+		display: none;
+		@media (max-width: 991px) {
+			margin-top: -12px;
+			@include flex(row, flex-start, center, 8px);
+			padding: 8px;
+			align-self: stretch;
+			color: $white;
+			@include text-style(12px, 400, 16px);
+			border-radius: 6px;
+			background: rgba(67, 67, 74, 0.6);
+		}
+	}
+
+	&__btn {
+		display: none;
+		@media (max-width: 991px) {
+			@include center;
+			@include box(100%, 36px);
+			padding: 8px 16px;
+			align-self: stretch;
+			color: $white;
+			@include text-style(14px, 500, 18px, center);
+			border-radius: 200px;
+			background: $green;
+			@include transition;
+			&:hover {
+				background: $text;
+			}
+		}
+	}
+}

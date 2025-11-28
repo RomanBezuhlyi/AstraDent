@@ -19,6 +19,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 1;
+		animation: spin 20s linear infinite;
 	}
 }
 .footer {
@@ -62,17 +63,15 @@
 
 	&__btn {
 		@include center;
-		height: 46px;
+		height: 48px;
 		padding: 12px 45px;
 		color: $white;
 		@include text-style(14px, 500, 18px, center);
 		border-radius: 200px;
-		border: 1px solid $green;
 		background: $green;
 		@include transition;
 		&:hover {
-			color: $green;
-			background-color: $white;
+			background-color: $text;
 		}
 	}
 
@@ -254,3 +253,12 @@
 		}
 	}
 }
+
+// @keyframes spin {
+// 	from {
+// 		transform: rotate(0deg);
+// 	}
+// 	to {
+// 		transform: rotate(360deg);
+// 	}
+// }

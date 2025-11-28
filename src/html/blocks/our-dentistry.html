@@ -9,16 +9,22 @@
 				<button class="locations__format" type="button">На мапі</button>
 			</div>
 			<div class="locations__switcher">
-				<button class="locations__switch active" type="button">
+				<button
+					class="locations__switch active"
+					type="button"
+					data-target="kyiv"
+				>
 					16 філій Києва
 				</button>
-				<button class="locations__switch" type="button">Львів</button>
+				<button class="locations__switch" type="button" data-target="lviv">
+					Львів
+				</button>
 			</div>
 		</div>
 	</div>
 	<div class="locations__body">
 		<div class="locations__left">
-			<ul class="locations__list">
+			<ul class="locations__list" data-city="kyiv">
 				<li class="locations__item">
 					<div class="locations__item-info">
 						<h4>Astra Dent Опера</h4>
@@ -39,6 +45,70 @@
 						<img src="./img/location-1.png" alt="" />
 					</div>
 				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Лівобережна</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Є. Сверстюка, 3-Г</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-2.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Astra Clinic</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Святошинська, 3а</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-3.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Astra Clinic</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Святошинська, 3а</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-3.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item load-more">
+					<button class="btn-load-more">
+						Показати ще 10 <img src="./img/chevron.svg" alt="" />
+					</button>
+				</li>
+			</ul>
+			<ul class="locations__list" data-city="lviv" style="display: none">
 				<li class="locations__item">
 					<div class="locations__item-info">
 						<h4>Лівобережна</h4>

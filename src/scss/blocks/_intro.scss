@@ -261,30 +261,96 @@
 			}
 		}
 	}
-
-	&__filters {
-		@include flex(row, flex-start, center, 8px);
-		@media (max-width: 991px) {
-			gap: 4px;
-		}
-	}
-
-	&__filter {
-		@include flex(row, center, center, 8px);
-		@include box(190px, 40px);
-		padding: 6px 12px;
-		@include text-style(14px, 400, 18px);
-		border-radius: 6px;
-		background: $white;
-		@media (max-width: 991px) {
-			@include box(181px, 40px);
-			@include text-style(13px, 400, 16px);
-		}
-	}
 }
 .about-us-intro {
 	height: 644px;
 	@media (max-width: 991px) {
 		height: 542px;
 	}
+}
+
+.doctors-intro__filters {
+	@include flex(row, flex-start, center, 8px);
+}
+
+.doctors-intro__filter {
+	position: relative;
+}
+
+.doctors-intro__filter-btn {
+	@include flex(row, flex-start, center, 8px);
+	@include box(190px, 40px, 6px);
+	padding: 6px 12px;
+	@include text-style(14px, 400, 18px);
+	background: $white;
+	@media (max-width: 991px) {
+		gap: 4px;
+		width: 181px;
+		@include text-style(13px, 400, 16px);
+	}
+}
+
+.doctors-intro__dropdown {
+	display: none;
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	background: $white;
+	padding: 6px 12px;
+	z-index: 10;
+	width: 100%;
+	border-radius: 6px;
+}
+
+.doctors-intro__filter.active .doctors-intro__dropdown {
+	display: block;
+}
+
+.custom-checkbox {
+	position: relative;
+	@include flex(row, flex-start, center);
+	cursor: pointer;
+	padding-left: 28px;
+	@include text-style(14px, 400, 18px);
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		@include text-style(13px, 400, 16px);
+	}
+}
+
+.custom-checkbox input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.custom-checkbox .checkmark {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	@include box(18px, 18px, 4px);
+	background-color: $white;
+	border: 2px solid $green;
+	@include transition;
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+	background-color: $green;
+}
+
+.custom-checkbox .checkmark::after {
+	content: '';
+	position: absolute;
+	display: none;
+	left: 4px;
+	top: 1px;
+	@include box(4px, 8px);
+	border: solid $white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked ~ .checkmark::after {
+	display: block;
 }

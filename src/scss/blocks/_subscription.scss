@@ -61,16 +61,14 @@
 
 	&__left-btn {
 		@include center;
-		@include box(fit-content, 46px, 200px);
+		@include box(fit-content, 48px, 200px);
 		padding: 12px 45px;
 		color: $white;
 		@include text-style(14px, 500, 18px, center);
-		border: 1px solid $green;
 		background: $green;
 		@include transition;
 		&:hover {
-			color: $green;
-			background: $white;
+			background: $text;
 		}
 		@media (max-width: 991px) {
 			padding: 8px 16px;

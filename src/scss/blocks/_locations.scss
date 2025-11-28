@@ -206,20 +206,18 @@
 
 	&__item-btn {
 		@include flex(row, center, center, 10px);
-		@include box(fit-content, 30px, 200px);
+		@include box(fit-content, 32px, 200px);
 		padding: 8px 12px;
 		flex: 1 0 0;
 		color: $white;
 		@include text-style(14px, 500, 18px, center);
-		border: 1px solid $green;
 		background: $green;
 		@include transition;
 		@media (max-width: 991px) {
 			@include text-style(12px, 500, 16px);
 		}
 		&:hover {
-			color: $green;
-			background-color: $white;
+			background: $text;
 		}
 	}
 
@@ -296,17 +294,15 @@
 		@media (max-width: 991px) {
 			margin-top: 16px;
 			@include center;
-			@include box(100%, 34px, 200px);
+			@include box(100%, 36px, 200px);
 			padding: 8px 16px;
 			color: $white;
 			@include text-style(14px, 500, 18px, center);
-			border: 1px solid $green;
 			background: $green;
 			@include transition;
 		}
 		&:hover {
-			color: $green;
-			background: $white;
+			background: $text;
 		}
 	}
 }

@@ -6,20 +6,28 @@
 		<div class="locations__top-right">
 			<div class="locations__formats">
 				<button class="locations__format active" type="button">Списком</button>
-				<button class="locations__format" type="button">На мапі</button>
+				<a class="locations__format" href="#map">На мапі</a>
 			</div>
 			<div class="locations__switcher">
-				<button class="locations__switch active" type="button">
+				<button
+					class="locations__switch active"
+					type="button"
+					data-target="kyiv"
+				>
 					16 філій Києва
 				</button>
-				<button class="locations__switch" type="button">Львів</button>
-				<button class="locations__switch" type="button">Варшава</button>
+				<button class="locations__switch" type="button" data-target="lviv">
+					Львів
+				</button>
+				<button class="locations__switch" type="button" data-target="warsaw">
+					Варшава
+				</button>
 			</div>
 		</div>
 	</div>
 	<div class="locations__body">
 		<div class="locations__left">
-			<ul class="locations__list">
+			<ul class="locations__list" data-city="kyiv">
 				<li class="locations__item">
 					<div class="locations__item-info">
 						<h4>Astra Dent Опера</h4>
@@ -326,13 +334,113 @@
 					</div>
 				</li>
 			</ul>
+			<ul class="locations__list" data-city="lviv" style="display: none">
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Лівобережна</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Є. Сверстюка, 3-Г</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-2.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Astra Clinic</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Святошинська, 3а</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-3.png" alt="" />
+					</div>
+				</li>
+			</ul>
+
+			<ul class="locations__list" data-city="warsaw" style="display: none">
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Дарниця Метро (ТЦ DOMA Center)</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Будівельників, 40</p>
+						<p>з 8.00 до 22.00 без вихідних</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-8.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Поділ</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Верхній Вал, 28-30</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-9.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Харківська</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>Харківське шосе, 152</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-10.png" alt="" />
+					</div>
+				</li>
+			</ul>
 			<button class="locations__list-more">
 				Показати ще 10 <img src="./img/chevron.svg" alt="" />
 			</button>
 		</div>
 		<div class="locations__right">
 			<h2 class="locations__right-title">Astra Dent в Києві</h2>
-			<div class="locations__map">
+			<div id="map" class="locations__map">
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7528288.057192051!2d13.0760952528606!3d-22.87934318179411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bf53c7e6ed37521%3A0xd3b9e5a5a8ecb261!2z0J3QsNC80ZbQsdGW0Y8!5e0!3m2!1suk!2sua!4v1763822883260!5m2!1suk!2sua"
 					style="border: 0"

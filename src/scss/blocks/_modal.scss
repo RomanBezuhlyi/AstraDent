@@ -128,12 +128,11 @@
 
 	&__btn {
 		@include flex(row, center, center, 10px);
-		@include box(100%, 46px);
+		@include box(100%, 48px);
 		padding: 12px 36px;
 		color: $white;
 		@include text-style(16px, 500, 22px, center);
 		border-radius: 200px;
-		border: 1px solid $green;
 		background: $green;
 		@include transition;
 		@media (max-width: 991px) {
@@ -141,8 +140,7 @@
 			@include text-style(14px, 400, 18px);
 		}
 		&:hover {
-			color: $green;
-			background: $white;
+			background: $text;
 		}
 	}
 

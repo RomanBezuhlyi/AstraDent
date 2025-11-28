@@ -117,12 +117,11 @@
 
 	&__block-btn {
 		@include center;
-		height: 46px;
+		height: 48px;
 		padding: 12px 45px;
 		color: $white;
 		@include text-style(14px, 500, 18px, center);
 		border-radius: 200px;
-		border: 1px solid $green;
 		background: $green;
 		@include transition;
 		@media (max-width: 991px) {
@@ -130,8 +129,7 @@
 			padding: 8px 16px;
 		}
 		&:hover {
-			color: $green;
-			background: $white;
+			background: $text;
 		}
 	}
 

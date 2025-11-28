@@ -60,17 +60,15 @@ button {
 
 .primary {
 	@include flex(row, center, center, 10px);
-	height: 42px;
+	height: 44px;
 	padding: 12px 36px;
 	color: $white;
 	@include text-style(14px, 500, 18px, center);
-	border: 1px solid $green;
 	border-radius: 200px;
 	background: $green;
 	@include transition;
 	&:hover {
-		color: $green;
-		background: $white;
+		background: $text;
 	}
 	@media (max-width: 1248px) {
 		padding: 8px 12px;

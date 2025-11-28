@@ -74,4 +74,10 @@
 		@include flex(row, flex-start, center, 12px);
 		@include text-style(16px, 500, 22px);
 	}
+
+	&__bottom-line {
+		@include box(312px, 1px);
+		margin-left: auto;
+		background: #dfe6e8;
+	}
 }

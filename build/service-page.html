@@ -1172,6 +1172,12 @@
 			</div>
 		</div>
 	</div>
+	<div class="header-mobile-search">
+		<div class="search">
+			<img src="./img/search.svg" alt="" />
+			<input type="text" placeholder="Пошук по послугах, лікаріх, хворобах" />
+		</div>
+	</div>
 </header>
 <div class="mobile-nav">
 	<div class="container">
@@ -1230,7 +1236,16 @@
 
 				<div class="wrapper">
 					<div class="wrapper__left">
-						<section class="section services">
+						<section class="service-switcher">
+	<ul class="service-switcher__list">
+		<li class="service-switcher__item"><a class="active" href="#">Цiни</a></li>
+		<li class="service-switcher__item"><a href="#">Лікарі</a></li>
+		<li class="service-switcher__item"><a href="#">До-після</a></li>
+		<li class="service-switcher__item"><a href="#">Відгуки</a></li>
+		<li class="service-switcher__item"><a href="#">Стоматології</a></li>
+	</ul>
+</section>
+<section class="section services">
 	<div class="services__top">
 		<h2 class="services__title">Ціни на послуги імплантаціі</h2>
 	</div>
@@ -2216,16 +2231,22 @@
 				<button class="locations__format" type="button">На мапі</button>
 			</div>
 			<div class="locations__switcher">
-				<button class="locations__switch active" type="button">
+				<button
+					class="locations__switch active"
+					type="button"
+					data-target="kyiv"
+				>
 					16 філій Києва
 				</button>
-				<button class="locations__switch" type="button">Львів</button>
+				<button class="locations__switch" type="button" data-target="lviv">
+					Львів
+				</button>
 			</div>
 		</div>
 	</div>
 	<div class="locations__body">
 		<div class="locations__left">
-			<ul class="locations__list">
+			<ul class="locations__list" data-city="kyiv">
 				<li class="locations__item">
 					<div class="locations__item-info">
 						<h4>Astra Dent Опера</h4>
@@ -2246,6 +2267,70 @@
 						<img src="./img/location-1.png" alt="" />
 					</div>
 				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Лівобережна</h4>
+						<a href="#">+38 044 222 33 33</a>
+						<p>вул. Є. Сверстюка, 3-Г</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-2.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Astra Clinic</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Святошинська, 3а</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-3.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item">
+					<div class="locations__item-info">
+						<h4>Astra Clinic</h4>
+						<a href="#">+38 073 222 33 33</a>
+						<p>вул. Святошинська, 3а</p>
+						<p>ПН - НД: з 9.00 до 21.00</p>
+						<div class="locations__item-bottom">
+							<button class="locations__item-btn make-an-appointment">
+								Записатися на прийом
+							</button>
+							<button class="locations__item-plane">
+								<img src="./img/plane.svg" alt="" />
+							</button>
+						</div>
+					</div>
+					<div class="locations__item-img">
+						<img src="./img/location-3.png" alt="" />
+					</div>
+				</li>
+				<li class="locations__item load-more">
+					<button class="btn-load-more">
+						Показати ще 10 <img src="./img/chevron.svg" alt="" />
+					</button>
+				</li>
+			</ul>
+			<ul class="locations__list" data-city="lviv" style="display: none">
 				<li class="locations__item">
 					<div class="locations__item-info">
 						<h4>Лівобережна</h4>
@@ -2703,10 +2788,12 @@
 				<img src="./img/clock.svg" alt="" />
 				Працюємо з 9 по 21
 			</li>
+			<li class="consultation__bottom-line"></li>
 			<li class="consultation__bottom-item">
 				<img src="./img/calendar.svg" alt="" />
 				Без вихідних
 			</li>
+			<li class="consultation__bottom-line"></li>
 			<li class="consultation__bottom-item">
 				<img src="./img/flash.svg" alt="" />
 				Завжди зі світлом

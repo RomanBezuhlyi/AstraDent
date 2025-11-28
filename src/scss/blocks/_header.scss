@@ -247,6 +247,7 @@
 		background: rgba(0, 0, 0, 0.08);
 		@include transition;
 		&:focus {
+			width: 300px;
 			border-color: $white;
 			background: rgba(0, 0, 0, 0.04);
 		}
@@ -665,6 +666,49 @@
 	&__social--item,
 	&__social--link {
 		@include center;
+	}
+}
+
+.header-mobile-search {
+	display: none;
+	@media (max-width: 991px) {
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 100px;
+		z-index: 22;
+		width: 100%;
+		left: -100%;
+		@include transition;
+		&.open {
+			left: 0;
+		}
+	}
+	.search {
+		position: relative;
+		@include box(100%, 40px);
+
+		img {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 12px;
+			z-index: 2;
+		}
+		input {
+			@include box(100%);
+			padding: 6px 12px 6px 48px;
+			color: $white;
+			@include text-style(13px, 400, 16px);
+			@include transition;
+			border-radius: 6px;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			background: rgba(67, 67, 74, 0.8);
+			backdrop-filter: blur(8px);
+			&::placeholder {
+				color: #c5c5cc;
+			}
+		}
 	}
 }
 

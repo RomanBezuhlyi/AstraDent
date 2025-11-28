@@ -148,17 +148,15 @@
 
 	&__card-record {
 		@include center;
-		@include box(fit-content, 30px, 200px);
+		@include box(fit-content, 32px, 200px);
 		padding: 8px 16px;
 		color: $white;
 		@include text-style(14px, 500, 18px, center);
 		border-radius: 200px;
 		background: $green;
-		border: 1px solid $green;
 		@include transition;
 		&:hover {
-			color: $green;
-			background: $white;
+			background: $text;
 		}
 		@media (max-width: 991px) {
 			@include text-style(12px, 500, 16px);
@@ -213,18 +211,16 @@
 
 	&__btn-more {
 		@include center;
-		@include box(fit-content, 38px, 200px);
+		@include box(fit-content, 40px, 200px);
 		padding: 12px 36px;
 		color: $white;
 		@include text-style(14px, 500, 18px, center);
 		background: $green;
-		border: 1px solid $green;
 		@include transition;
 		margin: auto;
 		margin-top: 20px;
 		&:hover {
-			color: $green;
-			background: $white;
+			background: $text;
 		}
 		@media (max-width: 991px) {
 			width: 100%;

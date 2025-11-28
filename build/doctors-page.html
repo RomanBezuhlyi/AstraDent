@@ -1172,6 +1172,12 @@
 			</div>
 		</div>
 	</div>
+	<div class="header-mobile-search">
+		<div class="search">
+			<img src="./img/search.svg" alt="" />
+			<input type="text" placeholder="Пошук по послугах, лікаріх, хворобах" />
+		</div>
+	</div>
 </header>
 <div class="mobile-nav">
 	<div class="container">
@@ -1223,14 +1229,67 @@
 			<input type="text" placeholder="Пошук по ПІБ лікаря" />
 		</div>
 		<div class="doctors-intro__filters">
-			<button class="doctors-intro__filter">
-				<img src="./img/filter.svg" alt="" />
-				Лікарі за напрямами
-			</button>
-			<button class="doctors-intro__filter">
-				<img src="./img/location.svg" alt="" />
-				Фильтр за філією
-			</button>
+			<!-- Фільтр за напрямами -->
+			<div class="doctors-intro__filter">
+				<button type="button" class="doctors-intro__filter-btn">
+					<img src="./img/filter.svg" alt="" />
+					Лікарі за напрямами
+				</button>
+				<ul class="doctors-intro__dropdown">
+					<li>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="direction" value="dentist" />
+							<span class="checkmark"></span>
+							Стоматолог
+						</label>
+					</li>
+					<li>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="direction" value="surgeon" />
+							<span class="checkmark"></span>
+							Хірург
+						</label>
+					</li>
+					<li>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="direction" value="orthodontist" />
+							<span class="checkmark"></span>
+							Ортодонт
+						</label>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Фільтр за філією -->
+			<div class="doctors-intro__filter">
+				<button type="button" class="doctors-intro__filter-btn">
+					<img src="./img/location.svg" alt="" />
+					Фільтр за філією
+				</button>
+				<ul class="doctors-intro__dropdown">
+					<li>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="branch" value="kyiv" />
+							<span class="checkmark"></span>
+							Київ
+						</label>
+					</li>
+					<li>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="branch" value="lviv" />
+							<span class="checkmark"></span>
+							Львів
+						</label>
+					</li>
+					<li>
+						<label class="custom-checkbox">
+							<input type="checkbox" name="branch" value="warsaw" />
+							<span class="checkmark"></span>
+							Варшава
+						</label>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </section>

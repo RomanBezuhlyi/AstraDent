@@ -1,6 +1,7 @@
 import { initAboutUsSwiper } from './modules/initAboutUsSwiper'
 import { initAboutUsVideo } from './modules/initAboutUsVideo'
 import { initAppointmentModal } from './modules/initAppointmentModal'
+import { initBannerClose } from './modules/initBannerClose'
 import { initBeforeAfter } from './modules/initBeforeAfter'
 import { initCaseSwiper } from './modules/initCaseSwiper'
 import { initCaseVideo } from './modules/initCaseVideo'
@@ -12,6 +13,7 @@ import {
 } from './modules/initClientsSwiper'
 import { initClientsVideo } from './modules/initClientsVideo'
 import { initDiplomasSwiper } from './modules/initDiplomasSwiper'
+import { initDoctorFilters } from './modules/initDoctorFilters'
 import { initDoctorSwiper } from './modules/initDoctorSwiper'
 import { initDoctorVideoPlayer } from './modules/initDoctorVideoPlayer'
 import {
@@ -22,10 +24,14 @@ import { initDropdowns } from './modules/initDropdowns'
 import { initFaq } from './modules/initFaq'
 import { initHeaderMobileDropdowns } from './modules/initHeaderMobileDropdowns'
 import { initHeaderMobileMenu } from './modules/initHeaderMobileMenu'
+import { initHelpBlock } from './modules/initHelpBlock'
 import { initHeroSwiper } from './modules/initHeroSwiper'
 import { initInfoVideo } from './modules/initInfoVideo'
 import { initInsuranceSwiper } from './modules/initInsuranceSwiper'
+import { initLocationTabs } from './modules/initLocationTabs'
 import { initLocationsList } from './modules/initLocationsList'
+import { initLocationsLoadMore } from './modules/initLocationsLoadMore'
+import { initMobileSearch } from './modules/initMobileSearch'
 import { initModalDropdown } from './modules/initModalDropdown'
 import { initOpenCatalogMenu } from './modules/initOpenCatalogMenu'
 import { initPartnersSwiper } from './modules/initPartnersSwiper'
@@ -73,4 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	initInfoVideo()
 	initAboutUsSwiper()
 	initAboutUsVideo()
+	initBannerClose()
+	initLocationTabs()
+	initDoctorFilters()
+	initHelpBlock()
+	initLocationsLoadMore()
+	initMobileSearch()
 })

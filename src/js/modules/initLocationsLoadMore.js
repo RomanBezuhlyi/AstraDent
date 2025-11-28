@@ -31,7 +31,7 @@ export function initLocationsLoadMore() {
 			e.preventDefault()
 
 			// показуємо наступні 2
-			const nextItems = Array.from(items).slice(visibleCount, visibleCount + 2)
+			const nextItems = Array.from(items).slice(visibleCount, visibleCount + 3)
 			nextItems.forEach(item => (item.style.display = 'flex'))
 
 			visibleCount += nextItems.length

@@ -52,6 +52,14 @@
 		text-transform: uppercase;
 		border-radius: 200px;
 		background: $white;
+		img {
+			@include transition;
+		}
+		&:hover {
+			img {
+				transform: scale(1.3);
+			}
+		}
 	}
 
 	.clients__swiper-2 {

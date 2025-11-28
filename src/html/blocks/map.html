@@ -1,8 +1,12 @@
 <section class="map section">
 	<h2 class="map__title">Як дістатися клініки</h2>
 	<div class="map__contacts-switcher mobile">
-		<button class="map__contacts-switch active">На авто</button>
-		<button class="map__contacts-switch">Громадським транспортом</button>
+		<button class="map__contacts-switch active" data-target="first">
+			На авто
+		</button>
+		<button class="map__contacts-switch" data-target="second">
+			Громадським транспортом
+		</button>
 	</div>
 	<div class="map__content">
 		<iframe
@@ -15,23 +19,43 @@
 		></iframe>
 		<div class="map__contacts">
 			<div class="map__contacts-switcher desktop">
-				<button class="map__contacts-switch active">На авто</button>
-				<button class="map__contacts-switch">Громадським транспортом</button>
+				<button class="map__contacts-switch active" data-target="first">
+					На авто
+				</button>
+				<button class="map__contacts-switch" data-target="second">
+					Громадським транспортом
+				</button>
 			</div>
-			<button class="map__contacts-btn mobile">Прокласти маршрут</button>
-			<p class="map__contacts-text">
-				Відділення знаходиться в пішій доступності від метро Золоті Ворота,
-				навпроти Національної опери України ім. Т. Г. Шевченка, тому дістатися
-				до нас легко з будь-якої частини міста.
-			</p>
-			<button class="map__contacts-btn desktop">Прокласти маршрут</button>
-			<div class="map__contacts-bottom">
-				<a class="map__contacts-bottom--item" href="#"
-					><img src="./img/parking.svg" alt="" />Паркінг</a
-				>
-				<a class="map__contacts-bottom--item" href="#"
-					><img src="./img/circled-play 1.svg" alt="" />Відео локаціі</a
-				>
+			<div class="map__contacts-first active" data-block="first">
+				<button class="map__contacts-btn mobile">Прокласти маршрут</button>
+				<p class="map__contacts-text">
+					Відділення знаходиться в пішій доступності від метро Золоті Ворота,
+					навпроти Національної опери України ім. Т. Г. Шевченка, тому дістатися
+					до нас легко з будь-якої частини міста.
+				</p>
+				<button class="map__contacts-btn desktop">Прокласти маршрут</button>
+				<div class="map__contacts-bottom">
+					<a class="map__contacts-bottom--item" href="#"
+						><img src="./img/parking.svg" alt="" />Паркінг</a
+					>
+					<a class="map__contacts-bottom--item" href="#"
+						><img src="./img/circled-play 1.svg" alt="" />Відео локаціі</a
+					>
+				</div>
+			</div>
+			<div class="map__contacts-second" data-block="second">
+				<button class="map__contacts-btn mobile">Прокласти маршрут</button>
+				<p class="map__contacts-text">
+					Відділення знаходиться в пішій доступності від метро Золоті Ворота,
+					навпроти Національної опери України ім. Т. Г. Шевченка, тому дістатися
+					до нас легко з будь-якої частини міста.
+				</p>
+				<button class="map__contacts-btn desktop">Прокласти маршрут</button>
+				<div class="map__contacts-bottom">
+					<a class="map__contacts-bottom--item" href="#"
+						><img src="./img/circled-play 1.svg" alt="" />Відео локаціі</a
+					>
+				</div>
 			</div>
 		</div>
 	</div>

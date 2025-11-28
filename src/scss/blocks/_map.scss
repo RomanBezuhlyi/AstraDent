@@ -151,3 +151,13 @@
 		}
 	}
 }
+
+.map__contacts-first,
+.map__contacts-second {
+	display: none;
+}
+
+.map__contacts-first.active,
+.map__contacts-second.active {
+	display: block;
+}

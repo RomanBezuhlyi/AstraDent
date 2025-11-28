@@ -155,22 +155,26 @@
 	}
 
 	&__item {
-		@include flex(row, center, flex-start, 12px);
+		@include flex(row, flex-start, flex-start, 12px);
 		padding: 20px;
 		flex: 1 0 0;
 		border-radius: 8px;
 		background: rgba(255, 255, 255, 0.88);
-
+		@include transition;
 		@media (max-width: 991px) {
 			padding: 16px;
-			display: none; // ховаємо всі
+			display: none;
 		}
 
-		// показуємо лише перші три на мобілці
 		&:nth-child(-n + 3) {
 			@media (max-width: 991px) {
 				display: flex;
 			}
+		}
+
+		&:hover {
+			transform: translateY(-6px);
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 		}
 	}
 
@@ -206,7 +210,7 @@
 
 	&__item-btn {
 		@include flex(row, center, center, 10px);
-		@include box(fit-content, 32px, 200px);
+		@include box(fit-content, 40px, 200px);
 		padding: 8px 12px;
 		flex: 1 0 0;
 		color: $white;

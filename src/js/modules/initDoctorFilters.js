@@ -1,32 +1,38 @@
 export function initDoctorFilters() {
 	const filters = document.querySelectorAll('.doctors-intro__filter')
 
-	// якщо немає жодного фільтра — виходимо
-	if (!filters || filters.length === 0) {
-		console.warn('Фільтри лікарів не знайдено')
-		return
-	}
+	if (!filters || filters.length === 0) return
 
 	filters.forEach(filter => {
 		const btn = filter.querySelector('.doctors-intro__filter-btn')
+		const dropdown = filter.querySelector('.doctors-intro__dropdown')
 
-		// перевірка чи є кнопка
-		if (!btn) return
+		if (!btn || !dropdown) return
 
-		btn.addEventListener('click', () => {
+		btn.addEventListener('click', e => {
+			e.stopPropagation()
 			// закриваємо інші
 			filters.forEach(f => {
-				if (f !== filter) f.classList.remove('active')
+				if (f !== filter) f.classList.remove('open')
 			})
-			// відкриваємо поточний
-			filter.classList.toggle('active')
+			filter.classList.toggle('open')
+		})
+
+		dropdown.querySelectorAll('li').forEach(item => {
+			item.addEventListener('click', () => {
+				// замінюємо текст кнопки на вибране значення
+				const icon = btn.querySelector('img').outerHTML
+				btn.innerHTML = `${icon} ${item.textContent}`
+				btn.dataset.value = item.dataset.value
+				filter.classList.remove('open')
+			})
 		})
 	})
 
-	// клік поза списком закриває всі
+	// клік поза дропдауном закриває всі
 	document.addEventListener('click', e => {
 		if (!e.target.closest('.doctors-intro__filter')) {
-			filters.forEach(f => f.classList.remove('active'))
+			filters.forEach(f => f.classList.remove('open'))
 		}
 	})
 }

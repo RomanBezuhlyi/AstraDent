@@ -6,6 +6,7 @@
 	border-radius: 16px;
 	background: rgba(67, 67, 74, 0.8);
 	margin-bottom: 20px;
+	overflow: hidden;
 	@media (max-width: 991px) {
 		padding: 120px 12px 24px 12px;
 		width: calc(100% + 24px);
@@ -15,10 +16,11 @@
 
 	&__bg-element {
 		position: absolute;
-		top: 0;
+		top: -163px;
 		left: 50%;
 		transform: translateX(-50%);
 		z-index: 1;
+		transform-origin: center center;
 		animation: spin 20s linear infinite;
 	}
 }
@@ -151,6 +153,16 @@
 		@include box(auto, 40px, 200px);
 		background: rgba(67, 67, 74, 0.8);
 		backdrop-filter: blur(8px);
+		@include transition;
+		&:hover {
+			background: rgba(130, 200, 60, 0.8);
+			a {
+				color: $white;
+			}
+			svg {
+				fill: $white;
+			}
+		}
 	}
 	&__col-item > a {
 		@include box(100%);
@@ -158,6 +170,11 @@
 		padding: 12px 20px;
 		color: $white;
 		@include text-style(14px, 400, 18px);
+		@include transition;
+		svg {
+			fill: $green;
+			@include transition;
+		}
 	}
 
 	&__site-create {
@@ -254,11 +271,11 @@
 	}
 }
 
-// @keyframes spin {
-// 	from {
-// 		transform: rotate(0deg);
-// 	}
-// 	to {
-// 		transform: rotate(360deg);
-// 	}
-// }
+@keyframes spin {
+	from {
+		transform: translateX(-50%) rotate(0deg);
+	}
+	to {
+		transform: translateX(-50%) rotate(360deg);
+	}
+}

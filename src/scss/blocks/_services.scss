@@ -27,6 +27,7 @@
 		padding: 4px 8px 4px 12px;
 		border-radius: 200px;
 		background: $white;
+		@include transition;
 		@media (max-width: 991px) {
 			padding: 4px 8px 4px 12px;
 			gap: 4px;
@@ -39,6 +40,14 @@
 			text-transform: uppercase;
 			@media (max-width: 991px) {
 				@include text-style(13px, 500, 16px);
+			}
+		}
+		img {
+			@include transition;
+		}
+		&:hover {
+			img {
+				transform: scale(1.3);
 			}
 		}
 	}
@@ -90,15 +99,20 @@
 			height: 160px;
 		}
 		&:hover {
-			transform: scale(1.1);
-			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-		}
-	}
-
-	&__item.accent {
-		background: $green;
-		.services__item-title {
-			color: $white;
+			background: $green;
+			.services__item-img {
+				fill: $white;
+			}
+			.services__item-title {
+				color: $white;
+			}
+			.services__item-text {
+				color: $white;
+			}
+			.services__item-mark {
+				color: $green;
+				background: $white;
+			}
 		}
 	}
 
@@ -114,6 +128,8 @@
 	&__item-img {
 		@include box(60px);
 		object-fit: cover;
+		fill: $green;
+		@include transition;
 		@media (max-width: 991px) {
 			@include box(50px);
 		}
@@ -126,6 +142,7 @@
 
 	&__item-title {
 		@include text-style(20px, 500, 26px);
+		@include transition;
 		@media (max-width: 991px) {
 			@include text-style(16px, 500, 20px);
 		}
@@ -134,6 +151,7 @@
 	&__item-text {
 		color: #7f7f86;
 		@include text-style(16px, 400, 22px);
+		@include transition;
 		@media (max-width: 991px) {
 			@include text-style(14px, 400, 18px);
 		}
@@ -150,6 +168,7 @@
 		backdrop-filter: blur(4px);
 		color: $white;
 		@include text-style(14px, 400, 18px);
+		@include transition;
 		@media (max-width: 991px) {
 			@include text-style(12px, 400, 16px);
 		}

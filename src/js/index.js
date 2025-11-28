@@ -31,6 +31,7 @@ import { initInsuranceSwiper } from './modules/initInsuranceSwiper'
 import { initLocationTabs } from './modules/initLocationTabs'
 import { initLocationsList } from './modules/initLocationsList'
 import { initLocationsLoadMore } from './modules/initLocationsLoadMore'
+import { initMapContactsSwitcher } from './modules/initMapContactsSwitcher'
 import { initMobileSearch } from './modules/initMobileSearch'
 import { initModalDropdown } from './modules/initModalDropdown'
 import { initOpenCatalogMenu } from './modules/initOpenCatalogMenu'
@@ -38,7 +39,6 @@ import { initPartnersSwiper } from './modules/initPartnersSwiper'
 import { initPhoneMask } from './modules/initPhoneMask'
 import { initPlayVideo } from './modules/initPlayVideo'
 import { initPriceAccordion } from './modules/initPriceAccordion'
-import { initServiceSwitcher } from './modules/initServiceSwitcher'
 import { initSharesSwiper } from './modules/initSharesSwiper'
 import { initSpecialists } from './modules/initSpecialists'
 import { initThankModal } from './modules/initThankModal'
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initBeforeAfter()
 	initCaseSwiper()
 	initCaseVideo()
-	initServiceSwitcher()
 	initPriceAccordion()
 	initSharesSwiper()
 	initClientsSwiper2()
@@ -85,4 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	initHelpBlock()
 	initLocationsLoadMore()
 	initMobileSearch()
+	initMapContactsSwitcher()
 })

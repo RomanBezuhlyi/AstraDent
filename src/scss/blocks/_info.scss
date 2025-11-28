@@ -72,6 +72,13 @@
 		}
 	}
 
+	.ui-table tr {
+		@include transition;
+		&:hover {
+			background: $bg;
+		}
+	}
+
 	.ui-table td {
 		padding: 8px 12px;
 		border-bottom: 1px solid #c5c5cc;

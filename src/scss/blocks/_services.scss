@@ -95,23 +95,51 @@
 		background: rgba(255, 255, 255, 0.88);
 		overflow: hidden;
 		@include transition;
+		&::after {
+			content: '';
+			position: absolute;
+			right: -135px;
+			top: -135px;
+			@include box(0);
+			border-radius: 270px;
+			background: $green;
+			z-index: 1;
+			@include transition;
+		}
 		@media (max-width: 991px) {
 			height: 160px;
 		}
 		&:hover {
-			background: $green;
+			&::after {
+				@include box(270px);
+			}
 			.services__item-img {
 				fill: $white;
 			}
-			.services__item-title {
-				color: $white;
+			.services__item-title > img {
+				opacity: 1;
+				transform: translateY(-50%) translateX(12px);
 			}
-			.services__item-text {
-				color: $white;
-			}
-			.services__item-mark {
-				color: $green;
-				background: $white;
+		}
+	}
+
+	&__item.accent {
+		background: $green;
+		&:after {
+			background: $white;
+		}
+		.services__item-img {
+			fill: $white;
+		}
+		.services__item-title {
+			color: $white;
+		}
+		.services__item-text {
+			color: $white;
+		}
+		&:hover {
+			.services__item-img {
+				fill: $green;
 			}
 		}
 	}
@@ -130,6 +158,7 @@
 		object-fit: cover;
 		fill: $green;
 		@include transition;
+		z-index: 2;
 		@media (max-width: 991px) {
 			@include box(50px);
 		}
@@ -138,11 +167,23 @@
 	&__item-info {
 		margin-right: auto;
 		@include flex(column, flex-start, flex-start);
+		z-index: 2;
 	}
 
 	&__item-title {
+		position: relative;
+		width: 70%;
+		display: block;
 		@include text-style(20px, 500, 26px);
 		@include transition;
+		img {
+			position: absolute;
+			top: 50%;
+			right: -20px;
+			transform: translateY(-50%) translateX(0);
+			opacity: 0;
+			@include transition;
+		}
 		@media (max-width: 991px) {
 			@include text-style(16px, 500, 20px);
 		}

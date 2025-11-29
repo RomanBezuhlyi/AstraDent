@@ -155,12 +155,25 @@
 	}
 
 	&__item {
+		position: relative;
 		@include flex(row, flex-start, flex-start, 12px);
 		padding: 20px;
 		flex: 1 0 0;
 		border-radius: 8px;
 		background: rgba(255, 255, 255, 0.88);
 		@include transition;
+		overflow: hidden;
+		&::after {
+			content: '';
+			position: absolute;
+			right: -110px;
+			top: -110px;
+			@include box(0);
+			border-radius: 220px;
+			background: $green;
+			z-index: 1;
+			@include transition;
+		}
 		@media (max-width: 991px) {
 			padding: 16px;
 			display: none;
@@ -173,21 +186,37 @@
 		}
 
 		&:hover {
-			transform: translateY(-6px);
-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+			&::after {
+				@include box(220px);
+			}
+			.locations__item-img > img {
+				transform: scale(1.2);
+			}
+
+			.locations__item-info > h4 > img {
+				opacity: 1;
+				transform: translateX(0);
+			}
 		}
 	}
 
 	&__item-info {
 		@include flex(column, flex-start, flex-start, 8px);
+		z-index: 2;
 		@media (max-width: 991px) {
 			gap: 4px;
 		}
 		h4 {
+			@include flex(row, flex-start, center, 12px);
 			@include text-style(20px, 500, 26px);
 			@media (max-width: 991px) {
 				@include text-style(16px, 500, 20px);
 			}
+		}
+		h4 > img {
+			opacity: 0;
+			transform: translateX(-12px);
+			@include transition;
 		}
 		a {
 			color: $black;
@@ -239,6 +268,9 @@
 		flex-shrink: 0;
 		@include box(140px, 100%);
 		backdrop-filter: blur(8px);
+		z-index: 2;
+		border-radius: 8px;
+		overflow: hidden;
 		@media (max-width: 991px) {
 			@include box(120px);
 			padding: 0;
@@ -254,14 +286,15 @@
 			border-radius: 6px;
 			background: rgba(255, 255, 255, 0.8);
 			backdrop-filter: blur(4px);
+			z-index: 3;
 			@media (max-width: 991px) {
 				@include text-style(12px, 400, 16px);
 			}
 		}
 		img {
-			border-radius: 8px;
 			@include box(100%);
 			object-fit: cover;
+			@include transition;
 		}
 	}
 

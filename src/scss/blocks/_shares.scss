@@ -56,12 +56,24 @@
 			height: 240px;
 			border-radius: 8px;
 		}
+		&:hover {
+			.shares__card-link {
+				@include box(48px);
+			}
+			.shares__card-img {
+				transform: scale(1.2);
+			}
+			.shares__card-info {
+				background: rgba(67, 67, 74, 0.6);
+			}
+		}
 	}
 
 	&__card-img {
 		position: relative;
 		@include box(100%);
 		object-fit: cover;
+		@include transition;
 	}
 
 	&__card-link {
@@ -73,6 +85,7 @@
 		padding: 4px;
 		border-radius: 200px;
 		background: $green;
+		@include transition;
 		@media (max-width: 991px) {
 			top: 4px;
 			right: 4px;
@@ -90,6 +103,7 @@
 		border-radius: 12px;
 		background: rgba(67, 67, 74, 0.4);
 		backdrop-filter: blur(8px);
+		@include transition;
 		@media (max-width: 991px) {
 			width: calc(100% - 8px);
 			left: 4px;

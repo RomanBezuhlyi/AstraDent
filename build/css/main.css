@@ -1329,6 +1329,16 @@ button {
     height: 640px;
   }
 }
+.hero__card-small:hover .hero__card-link {
+  width: 48px;
+  height: 48px;
+}
+.hero__card-small:hover .hero__img {
+  transform: scale(1.2);
+}
+.hero__card-small:hover .hero__card-content--small {
+  background: rgba(67, 67, 74, 0.6);
+}
 @media (max-width: 991px) {
   .hero__card-small {
     height: 240px;
@@ -1350,10 +1360,6 @@ button {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-}
-.hero__card-link:hover {
-  background: #43434a;
-  transform: scale(1.1);
 }
 @media (max-width: 991px) {
   .hero__card-link {
@@ -1381,6 +1387,10 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .hero__card-info {
   position: absolute;
@@ -1424,6 +1434,10 @@ button {
   border-radius: 12px;
   background: rgba(67, 67, 74, 0.4);
   backdrop-filter: blur(8px);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 991px) {
   .hero__card-content--small {
@@ -1723,26 +1737,54 @@ button {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
+.services__item::after {
+  content: "";
+  position: absolute;
+  right: -135px;
+  top: -135px;
+  width: 0;
+  height: 0;
+  border-radius: 270px;
+  background: #82c83c;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
 @media (max-width: 991px) {
   .services__item {
     height: 160px;
   }
 }
-.services__item:hover {
-  background: #82c83c;
+.services__item:hover::after {
+  width: 270px;
+  height: 270px;
 }
 .services__item:hover .services__item-img {
   fill: #ffffff;
 }
-.services__item:hover .services__item-title {
-  color: #ffffff;
+.services__item:hover .services__item-title > img {
+  opacity: 1;
+  transform: translateY(-50%) translateX(12px);
 }
-.services__item:hover .services__item-text {
-  color: #ffffff;
+.services__item.accent {
+  background: #82c83c;
 }
-.services__item:hover .services__item-mark {
-  color: #82c83c;
+.services__item.accent:after {
   background: #ffffff;
+}
+.services__item.accent .services__item-img {
+  fill: #ffffff;
+}
+.services__item.accent .services__item-title {
+  color: #ffffff;
+}
+.services__item.accent .services__item-text {
+  color: #ffffff;
+}
+.services__item.accent:hover .services__item-img {
+  fill: #82c83c;
 }
 .services__item-link {
   width: 100%;
@@ -1768,6 +1810,7 @@ button {
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  z-index: 2;
 }
 @media (max-width: 991px) {
   .services__item-img {
@@ -1782,12 +1825,27 @@ button {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0;
+  z-index: 2;
 }
 .services__item-title {
+  position: relative;
+  width: 70%;
+  display: block;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
   text-align: left;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.services__item-title img {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%) translateX(0);
+  opacity: 0;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -2393,6 +2451,7 @@ button {
   }
 }
 .locations__item {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -2402,6 +2461,22 @@ button {
   flex: 1 0 0;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.88);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+.locations__item::after {
+  content: "";
+  position: absolute;
+  right: -110px;
+  top: -110px;
+  width: 0;
+  height: 0;
+  border-radius: 220px;
+  background: #82c83c;
+  z-index: 1;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -2418,9 +2493,16 @@ button {
     display: flex;
   }
 }
-.locations__item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.locations__item:hover::after {
+  width: 220px;
+  height: 220px;
+}
+.locations__item:hover .locations__item-img > img {
+  transform: scale(1.2);
+}
+.locations__item:hover .locations__item-info > h4 > img {
+  opacity: 1;
+  transform: translateX(0);
 }
 .locations__item-info {
   display: flex;
@@ -2428,6 +2510,7 @@ button {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 8px;
+  z-index: 2;
 }
 @media (max-width: 991px) {
   .locations__item-info {
@@ -2435,6 +2518,11 @@ button {
   }
 }
 .locations__item-info h4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
@@ -2447,6 +2535,14 @@ button {
     line-height: 20px;
     text-align: left;
   }
+}
+.locations__item-info h4 > img {
+  opacity: 0;
+  transform: translateX(-12px);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .locations__item-info a {
   color: #000;
@@ -2540,6 +2636,9 @@ button {
   width: 140px;
   height: 100%;
   backdrop-filter: blur(8px);
+  z-index: 2;
+  border-radius: 8px;
+  overflow: hidden;
 }
 @media (max-width: 991px) {
   .locations__item-img {
@@ -2564,6 +2663,7 @@ button {
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(4px);
+  z-index: 3;
 }
 @media (max-width: 991px) {
   .locations__item-img--mark {
@@ -2574,10 +2674,13 @@ button {
   }
 }
 .locations__item-img img {
-  border-radius: 8px;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .locations__right {
   flex: 1 1 45%;
@@ -4036,7 +4139,7 @@ button {
   width: 100%;
   margin-bottom: 40px;
 }
-@media (max-width: 991px) {
+@media (max-width: 600px) {
   .doctors-intro__bottom-btns {
     flex-direction: column;
     max-width: 100%;
@@ -4158,6 +4261,11 @@ button {
   align-items: flex-start;
   gap: 4px;
 }
+@media (max-width: 991px) {
+  .doctors-intro__bottom-reviews {
+    width: 100%;
+  }
+}
 .doctors-intro__bottom-review {
   width: 237px;
   display: flex;
@@ -4172,7 +4280,7 @@ button {
 }
 @media (max-width: 991px) {
   .doctors-intro__bottom-review {
-    width: 119px;
+    width: 33%;
   }
 }
 .doctors-intro__bottom-review--logo {
@@ -7964,11 +8072,25 @@ button {
     border-radius: 8px;
   }
 }
+.shares__card:hover .shares__card-link {
+  width: 48px;
+  height: 48px;
+}
+.shares__card:hover .shares__card-img {
+  transform: scale(1.2);
+}
+.shares__card:hover .shares__card-info {
+  background: rgba(67, 67, 74, 0.6);
+}
 .shares__card-img {
   position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .shares__card-link {
   position: absolute;
@@ -7982,6 +8104,10 @@ button {
   padding: 4px;
   border-radius: 200px;
   background: #82c83c;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 991px) {
   .shares__card-link {
@@ -8004,6 +8130,10 @@ button {
   border-radius: 12px;
   background: rgba(67, 67, 74, 0.4);
   backdrop-filter: blur(8px);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 991px) {
   .shares__card-info {

@@ -7,7 +7,7 @@ export function initMobileSearch() {
 
 	btnSearch.addEventListener('click', e => {
 		e.stopPropagation() // щоб клік по кнопці не закривав одразу
-		searchBlock.classList.add('open')
+		searchBlock.classList.toggle('open') // тепер повторний клік прибирає пошук
 	})
 
 	// клік поза блоком знімає клас

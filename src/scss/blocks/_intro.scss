@@ -107,7 +107,7 @@
 		max-width: 720px;
 		width: 100%;
 		margin-bottom: 40px;
-		@media (max-width: 991px) {
+		@media (max-width: 600px) {
 			flex-direction: column;
 			max-width: 100%;
 			margin-bottom: 16px;
@@ -185,6 +185,9 @@
 
 	&__bottom-reviews {
 		@include flex(row, flex-start, flex-start, 4px);
+		@media (max-width: 991px) {
+			width: 100%;
+		}
 	}
 
 	&__bottom-review {
@@ -195,7 +198,7 @@
 		border-radius: 8px;
 		background: rgba(255, 255, 255, 0.88);
 		@media (max-width: 991px) {
-			width: 119px;
+			width: 33%;
 		}
 	}
 

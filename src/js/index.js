@@ -63,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initClientsVideo()
 	initSpecialists()
 	initFaq()
-	initHeaderMobileDropdowns()
 	initDoctorSwiper()
 	initDoctorVideoPlayer()
 	initDiplomasSwiper()

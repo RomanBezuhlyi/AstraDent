@@ -8985,7 +8985,7 @@ button {
 }
 @media (max-width: 991px) {
   .bottom {
-    padding: 120px 12px 24px 12px;
+    padding: 120px 12px 140px 12px;
     width: calc(100% + 24px);
     margin-left: -12px;
     margin-bottom: 0;

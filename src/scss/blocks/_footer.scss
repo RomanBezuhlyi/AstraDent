@@ -219,7 +219,7 @@
 	}
 
 	&__number {
-		@include box(57%, 48px, 200px);
+		@include box(60%, 48px, 200px);
 		@include flex(row, center, center, 8px);
 		padding: 12px 16px;
 		background: rgba(67, 67, 74, 0.8);
@@ -232,7 +232,7 @@
 	}
 
 	&__socials {
-		@include box(43%, 48px, 200px);
+		@include box(40%, 48px, 200px);
 		@include flex(row, space-around, center, 12px);
 		padding: 12px 16px;
 		background: rgba(67, 67, 74, 0.8);

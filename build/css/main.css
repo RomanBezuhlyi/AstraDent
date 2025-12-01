@@ -9284,7 +9284,7 @@ button {
   margin-bottom: 12px;
 }
 .footer-mobile__number {
-  width: 57%;
+  width: 60%;
   height: 48px;
   border-radius: 200px;
   display: flex;
@@ -9306,7 +9306,7 @@ button {
   height: 24px;
 }
 .footer-mobile__socials {
-  width: 43%;
+  width: 40%;
   height: 48px;
   border-radius: 200px;
   display: flex;

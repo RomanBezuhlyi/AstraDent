@@ -9273,6 +9273,13 @@ button {
   line-height: 18px;
   text-align: left;
 }
+.footer-mobile__item > a svg {
+  fill: #82c83c;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
 .footer-mobile__contacts {
   margin-top: 4px;
   width: 100%;

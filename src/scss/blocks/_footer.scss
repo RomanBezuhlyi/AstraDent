@@ -209,6 +209,10 @@
 		@include flex(row, space-between, center);
 		color: $white;
 		@include text-style(14px, 400, 18px);
+		svg {
+			fill: $green;
+			@include transition;
+		}
 	}
 
 	&__contacts {

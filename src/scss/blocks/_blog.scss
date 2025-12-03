@@ -1,0 +1,201 @@
+@use '../abstracts' as *;
+.blog-intro {
+	.tags {
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+	.tag {
+		@include flex(row, flex-start, center, 8px);
+		padding: 6px 12px;
+		@include text-style(14px, 400, 18px);
+		height: 30px;
+		border-radius: 6px;
+		background: $white;
+		span {
+			color: #7f7f86;
+		}
+	}
+	.tag.disabled {
+		background: #c5c5cc;
+	}
+	.doctors-intro__filter-btn {
+		height: 30px !important;
+		@media (max-width: 991px) {
+			height: 40px !important;
+		}
+	}
+	@media (max-width: 991px) {
+		.cases-intro__bottom {
+			width: 100%;
+			flex-direction: row;
+		}
+		.doctors-intro__search {
+			width: 50%;
+		}
+		.doctors-intro__filters {
+			width: 50%;
+		}
+		.doctors-intro__filter {
+			width: 100% !important;
+		}
+	}
+}
+
+.blog {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__list {
+		display: grid;
+		gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: 991px) {
+			gap: 16px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: 767px) {
+			gap: 16px;
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
+	&__item {
+		height: 378px;
+		border-radius: 8px;
+		overflow: hidden;
+		@media (max-width: 991px) {
+			height: 366px;
+		}
+	}
+
+	&__card {
+		position: relative;
+		@include flex(column, space-between, flex-end);
+		flex: 1 0 0;
+		@include box(100%);
+		&:hover {
+			.blog__card-link {
+				@include box(48px);
+			}
+			.blog__card-img {
+				transform: scale(1.2);
+			}
+			.blog__card-info {
+				background: rgba(67, 67, 74, 0.6);
+			}
+		}
+	}
+
+	&__card-link {
+		position: absolute;
+		top: 4px;
+		right: 4px;
+		@include center;
+		@include box(32px);
+		padding: 4px;
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		z-index: 2;
+	}
+
+	&__card-img {
+		@include box(100%);
+		object-fit: cover;
+		@include transition;
+	}
+
+	&__card-info {
+		position: absolute;
+		left: 4px;
+		bottom: 4px;
+		width: calc(100% - 8px);
+		@include flex(column, flex-start, flex-start, 8px);
+		padding: 12px;
+		align-self: stretch;
+		border-radius: 6px;
+		background: rgba(67, 67, 74, 0.4);
+		backdrop-filter: blur(8px);
+		@include transition;
+		@media (max-width: 991px) {
+			gap: 4px;
+			padding: 8px;
+		}
+	}
+
+	&__card-title {
+		color: $white;
+		@include text-style(16px, 500, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	&__card-bottom {
+		width: 100%;
+		@include flex(row, space-between, center, 8px);
+	}
+
+	&__card-date {
+		width: 100%;
+		color: $bg;
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__card-place {
+		width: fit-content;
+		@include center;
+		flex-shrink: 0;
+		padding: 4px 6px;
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		border-radius: 4px;
+		background: rgba(67, 67, 74, 0.8);
+		backdrop-filter: blur(4px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__card-views {
+		width: fit-content;
+		@include flex(row, center, center, 8px);
+		flex-shrink: 0;
+		padding: 4px 6px;
+		color: $white;
+		@include text-style(14px, 400, 18px);
+		border-radius: 4px;
+		background: rgba(67, 67, 74, 0.8);
+		backdrop-filter: blur(4px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+
+	&__btn {
+		margin: auto;
+		margin-top: 20px;
+		@include center;
+		height: 40px;
+		padding: 12px 36px;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+		}
+		@media (max-width: 991px) {
+			margin-top: 16px;
+			@include box(100%, 36px);
+			padding: 8px 16px;
+		}
+	}
+}

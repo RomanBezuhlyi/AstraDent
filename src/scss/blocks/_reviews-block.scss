@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.reviews-large-block {
+	.clients__swiper {
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+	}
+	.doctor-reviews__body:not(:last-child) {
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+	}
+	.doctor-reviews__body {
+		align-items: stretch;
+	}
+	.doctor-reviews__left,
+	.doctor-reviews__right {
+		flex: 1;
+	}
+
+	.doctor-reviews__right .doctor-reviews__card {
+		height: 100%;
+	}
+}

@@ -1,0 +1,106 @@
+@use '../abstracts' as *;
+
+.reviews-bar {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__head {
+		@include flex(row, space-between, center);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__head-left {
+		@include flex(row, flex-start, center, 8px);
+		@media (max-width: 991px) {
+			width: 100%;
+			gap: 4px;
+		}
+	}
+
+	&__head-left--item {
+		@include flex(row, center, center, 4px);
+		padding: 12px 24px;
+		@include text-style(14px, 500, 18px);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		@media (max-width: 991px) {
+			padding: 8px;
+			@include text-style(12px, 500, 16px);
+			width: 25%;
+		}
+		&.calk {
+			color: $white;
+			background: #7f7f86;
+		}
+	}
+
+	&__head-right {
+		@include flex(row, flex-end, center, 4px);
+		@media (max-width: 991px) {
+			display: none;
+		}
+	}
+
+	&__head-right--btn {
+		@include center;
+		height: 44px;
+		padding: 8px 16px;
+		align-self: stretch;
+		color: $white;
+		@include text-style(14px, 500, 18px, center);
+		border-radius: 200px;
+		background: $green;
+		@include transition;
+		&:hover {
+			background: $text;
+		}
+		&.desktop {
+			display: flex !important;
+			@media (max-width: 991px) {
+				display: none !important;
+			}
+		}
+		&.mobile {
+			display: none !important;
+			@media (max-width: 991px) {
+				display: flex !important;
+			}
+		}
+		@media (max-width: 991px) {
+			margin-top: 16px;
+			@include box(100%, 36px);
+		}
+	}
+
+	&__bottom {
+		@include flex(column, flex-end, flex-end, 4px);
+		.bar {
+			position: relative;
+			@include box(100%, 8px);
+			background: #f14346;
+			border-radius: 4px;
+			overflow: hidden;
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				background: $green;
+				width: 94%;
+				height: 100%;
+			}
+		}
+		.bar-info {
+			@include flex(row, flex-end, center, 4px);
+			@include text-style(16px, 500, 22px);
+			@media (max-width: 991px) {
+				@include text-style(14px, 500, 18px);
+			}
+		}
+	}
+}

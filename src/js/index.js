@@ -3,6 +3,7 @@ import { initAboutUsVideo } from './modules/initAboutUsVideo'
 import { initAppointmentModal } from './modules/initAppointmentModal'
 import { initBannerClose } from './modules/initBannerClose'
 import { initBeforeAfter } from './modules/initBeforeAfter'
+import { initBlog } from './modules/initBlog'
 import { initCaseSwiper } from './modules/initCaseSwiper'
 import { initCaseVideo } from './modules/initCaseVideo'
 import { initCasesSwiper } from './modules/initCasesSwiper'
@@ -35,6 +36,7 @@ import { initMapContactsSwitcher } from './modules/initMapContactsSwitcher'
 import { initMobileSearch } from './modules/initMobileSearch'
 import { initModalDropdown } from './modules/initModalDropdown'
 import { initOpenCatalogMenu } from './modules/initOpenCatalogMenu'
+import { initPackets } from './modules/initPackets'
 import { initPartnersSwiper } from './modules/initPartnersSwiper'
 import { initPhoneMask } from './modules/initPhoneMask'
 import { initPlayVideo } from './modules/initPlayVideo'
@@ -84,4 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	initLocationsLoadMore()
 	initMobileSearch()
 	initMapContactsSwitcher()
+	initPackets()
+	initBlog()
 })

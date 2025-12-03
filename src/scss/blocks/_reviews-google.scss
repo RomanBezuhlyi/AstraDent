@@ -1,0 +1,65 @@
+@use '../abstracts' as *;
+
+.reviews-google {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(28px, 500, 34px, center);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(20px, 500, 26px);
+			margin-bottom: 16px;
+		}
+	}
+
+	.doctors-intro__filter {
+		width: 240px;
+		@media (max-width: 991px) {
+			width: 100%;
+		}
+	}
+
+	.doctors-intro__filter-btn {
+		@include box(240px, 40px);
+		@media (max-width: 991px) {
+			@include box(100%, 32px);
+		}
+	}
+
+	.doctors-intro__dropdown {
+		width: 100%;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	&__list {
+		margin-top: 20px;
+		@include flex(row, center, center);
+		background: #fff;
+		@media (max-width: 991px) {
+			margin-top: 16px;
+			background: transparent;
+		}
+		&.desktop {
+			display: flex;
+			@media (max-width: 991px) {
+				display: none;
+			}
+		}
+		&.mobile {
+			display: none;
+			@media (max-width: 991px) {
+				display: flex;
+			}
+		}
+	}
+
+	&__list-item {
+		@include center;
+	}
+
+	&__list-item--img {
+		object-fit: cover;
+	}
+}

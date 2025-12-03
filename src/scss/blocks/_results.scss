@@ -1,0 +1,106 @@
+@use '../abstracts' as *;
+
+.results {
+	margin-bottom: 4px;
+	@media (max-width: 991px) {
+		margin-bottom: 2px;
+	}
+	&__title {
+		@include text-style(20px, 500, 26px);
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			@include text-style(16px, 500, 20px);
+			margin-bottom: 16px;
+		}
+	}
+
+	&__search {
+		@include box(100%, 40px);
+		position: relative;
+		margin-bottom: 20px;
+		@media (max-width: 991px) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__search-icon {
+		position: absolute;
+		left: 16px;
+		top: 8px;
+	}
+
+	&__search-input {
+		@include box(100%);
+		@include flex(row, flex-start, center, 8px);
+		padding: 8px 16px 8px 48px;
+		align-self: stretch;
+		@include text-style(16px, 400, 22px);
+		border-radius: 8px;
+		border: 1px solid rgba(0, 0, 0, 0.12);
+		background: #fff;
+		@media (max-width: 991px) {
+			@include text-style(14px, 400, 18px);
+		}
+	}
+
+	&__list {
+		width: 100%;
+		@include flex(column, flex-start, flex-start, 20px);
+		@media (max-width: 991px) {
+			gap: 4px;
+		}
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+	&__link {
+		@include flex(row, space-between, center, 12px);
+		padding: 12px 20px;
+		align-self: stretch;
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.88);
+		@media (max-width: 991px) {
+			gap: 8px;
+			padding: 8px 12px;
+		}
+	}
+
+	&__link-left {
+		@include flex(column, flex-start, flex-start, 2px);
+	}
+
+	&__link-title {
+		@include text-style(16px, 500, 22px);
+		@media (max-width: 991px) {
+			@include text-style(14px, 500, 18px);
+		}
+	}
+
+	&__link-text {
+		@include text-style(14px, 400, 18px);
+		@media (max-width: 991px) {
+			@include text-style(13px, 400, 16px);
+		}
+	}
+
+	&__link-right {
+		@include flex(row, flex-end, center, 12px);
+		@media (max-width: 991px) {
+			gap: 8px;
+		}
+	}
+
+	&__link-type {
+		@include flex(row, center, center, 6px);
+		padding: 4px 8px;
+		@include text-style(14px, 400, 18px);
+		border-radius: 6px;
+		background: #f5f5f5;
+		backdrop-filter: blur(4px);
+		@media (max-width: 991px) {
+			@include text-style(12px, 400, 16px);
+		}
+	}
+}

@@ -20,9 +20,16 @@ export function initDoctorFilters() {
 
 		dropdown.querySelectorAll('li').forEach(item => {
 			item.addEventListener('click', () => {
-				// замінюємо текст кнопки на вибране значення
-				const icon = btn.querySelector('img').outerHTML
-				btn.innerHTML = `${icon} ${item.textContent}`
+				// знаходимо іконку (перша) та стрілку (chevron)
+				const icon = btn.querySelector('img:not(.chevron)')
+				const chevron = btn.querySelector('.chevron')
+
+				// очищаємо кнопку і додаємо потрібні елементи
+				btn.innerHTML = ''
+				if (icon) btn.appendChild(icon.cloneNode(true))
+				btn.appendChild(document.createTextNode(' ' + item.textContent))
+				if (chevron) btn.appendChild(chevron.cloneNode(true))
+
 				btn.dataset.value = item.dataset.value
 				filter.classList.remove('open')
 			})
